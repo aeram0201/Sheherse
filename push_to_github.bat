@@ -3,32 +3,31 @@ echo ========================================================
 echo         SheherSe - Push Project to GitHub
 echo ========================================================
 echo.
-set /p REPO_URL="Enter your GitHub Repository URL (e.g. https://github.com/<username>/Sheherse.git): "
-
-if "%REPO_URL%"=="" (
-    echo Error: No repository URL entered. Exiting.
-    pause
-    exit /b 1
-)
-
+echo Target Repository: https://github.com/aeram0201/Sheherse.git
 echo.
-echo Setting remote origin to: %REPO_URL%
+
 git remote remove origin 2>nul
-git remote add origin %REPO_URL%
+git remote add origin https://github.com/aeram0201/Sheherse.git
 git branch -M main
 
-echo.
 echo Pushing code to GitHub...
+echo (If a browser or login prompt appears, sign in with aerammmm@gmail.com / aeram0201)
+echo.
+
 git push -u origin main
 
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo ========================================================
-    echo   SUCCESS! SheherSe has been pushed to GitHub!
+    echo   SUCCESS! SheherSe is now live on GitHub!
+    echo   https://github.com/aeram0201/Sheherse
     echo ========================================================
 ) else (
     echo.
-    echo PUSH FAILED. Please ensure you have permission and are logged into GitHub.
+    echo ========================================================
+    echo   Push failed or cancelled.
+    echo   Make sure you are logged into GitHub with aeram0201.
+    echo ========================================================
 )
 echo.
 pause
