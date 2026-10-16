@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Forest Green Primary -->
+    <color name="forest_green_dark">#081C15</color>
+    <color name="forest_green_primary">#1B4332</color>
+    <color name="forest_green_medium">#2D6A4F</color>
+    <color name="forest_green_light">#40916C</color>
+    <color name="forest_green_pale">#D8F3DC</color>
+
+    <!-- Muted Teal Secondary -->
+    <color name="teal_secondary">#2C6E63</color>
+    <color name="teal_light">#52B788</color>
+    <color name="teal_pale">#E8F5E9</color>
+
+    <!-- Restrained Gold Accents -->
+    <color name="gold_primary">#D4AF37</color>
+    <color name="gold_dark">#997A15</color>
+    <color name="gold_light">#FDF6E2</color>
+    <color name="gold_badge">#F5EE9E</color>
+
+    <!-- Vibrant Mumbai Accents -->
+    <color name="vibrant_coral">#E05A47</color>
+    <color name="vibrant_coral_pale">#FFEAE6</color>
+    <color name="vibrant_amber">#D97706</color>
+    <color name="vibrant_amber_pale">#FEF3C7</color>
+    <color name="vibrant_cobalt">#1D4ED8</color>
+    <color name="vibrant_cobalt_pale">#DBEAFE</color>
+    <color name="vibrant_purple">#7C3AED</color>
+    <color name="vibrant_purple_pale">#EDE9FE</color>
+    <color name="vibrant_rose">#DB2777</color>
+    <color name="vibrant_rose_pale">#FCE7F3</color>
+    <color name="vibrant_emerald">#059669</color>
+    <color name="vibrant_emerald_pale">#D1FAE5</color>
+
+    <!-- Warm Ivory Background & Surfaces -->
+    <color name="warm_ivory">#FDFBF7</color>
+    <color name="warm_ivory_surface">#F7F4EB</color>
+    <color name="warm_ivory_card">#FFFFFF</color>
+    <color name="warm_ivory_divider">#E6E0D2</color>
+    <color name="warm_ivory_background">#FDFBF7</color>
+
+    <!-- Neutral & Text -->
+    <color name="text_primary">#19201D</color>
+    <color name="text_secondary">#4E5D54</color>
+    <color name="text_hint">#8A9A90</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Status Badges -->
+    <color name="status_sample">#E0E7FF</color>
+    <color name="status_sample_text">#3730A3</color>
+
+    <color name="status_community">#FEF3C7</color>
+    <color name="status_community_text">#92400E</color>
+
+    <color name="status_verified">#D1FAE5</color>
+    <color name="status_verified_text">#065F46</color>
+    <color name="status_verified_bg">#D1FAE5</color>
+
+    <color name="status_pending">#FFEDD5</color>
+    <color name="status_pending_text">#9A3412</color>
+    <color name="status_pending_bg">#FFEDD5</color>
+
+    <color name="status_rejected">#FEE2E2</color>
+    <color name="status_rejected_text">#991B1B</color>
+    <color name="status_rejected_bg">#FEE2E2</color>
+
+    <!-- Other UI Colors -->
+    <color name="heart_red">#E63946</color>
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    style="@style/SheherseCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Stop Number Badge -->
+        <TextView
+            android:id="@+id/tvStopNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@color/forest_green_pale"
+            android:gravity="center"
+            android:textColor="@color/forest_green_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="1" />
+
+        <!-- Info Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStopName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Subko Specialty Coffee Roasters" />
+
+            <TextView
+                android:id="@+id/tvStopArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                tools:text="Ranwar Village, Bandra West" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStopDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/teal_secondary"
+                    android:textSize="12sp"
+                    tools:text="⏱ 90 mins" />
+
+                <TextView
+                    android:id="@+id/tvStopCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/forest_green_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="₹0 (Free)" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Reorder and Delete Controls -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnMoveUp"
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_up"
+                android:contentDescription="Move up"
+                app:tint="@color/text_secondary" />
+
+            <ImageButton
+                android:id="@+id/btnMoveDown"
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_down"
+                android:contentDescription="Move down"
+                app:tint="@color/text_secondary" />
+        </LinearLayout>
+
+        <!-- Remove Stop -->
+        <ImageButton
+            android:id="@+id/btnDeleteStop"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="@string/delete"
+            app:tint="@color/status_rejected_text" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

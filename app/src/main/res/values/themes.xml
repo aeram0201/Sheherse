@@ -1,0 +1,61 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Sheherse" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/forest_green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/forest_green_pale</item>
+        <item name="colorOnPrimaryContainer">@color/forest_green_dark</item>
+
+        <item name="colorSecondary">@color/teal_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/teal_pale</item>
+        <item name="colorOnSecondaryContainer">@color/forest_green_dark</item>
+
+        <item name="colorTertiary">@color/gold_primary</item>
+        <item name="colorOnTertiary">@color/forest_green_dark</item>
+
+        <item name="android:colorBackground">@color/warm_ivory</item>
+        <item name="colorSurface">@color/warm_ivory_surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <item name="android:statusBarColor">@color/forest_green_primary</item>
+        <item name="android:navigationBarColor">@color/warm_ivory_surface</item>
+    </style>
+
+    <style name="Theme.Sheherse" parent="Base.Theme.Sheherse" />
+
+    <!-- Card and Component Styles -->
+    <style name="SheherseCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="strokeColor">@color/warm_ivory_divider</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="SheherseButton" parent="Widget.Material3.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/forest_green_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShehersePrimaryButton" parent="SheherseButton" />
+
+    <style name="SheherseOutlineButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">12dp</item>
+        <item name="strokeColor">@color/forest_green_primary</item>
+        <item name="android:textColor">@color/forest_green_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SheherseGoldButton" parent="Widget.Material3.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/gold_primary</item>
+        <item name="android:textColor">@color/forest_green_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

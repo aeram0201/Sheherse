@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/warm_ivory_surface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/forest_green_primary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/white"
+            app:title="Place Details"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <!-- Hero Banner Box -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/forest_green_dark">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvDetailEmoji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏛️"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:id="@+id/tvDetailCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:paddingStart="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="4dp"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="Historical &amp; Heritage" />
+                </LinearLayout>
+
+                <!-- Floating Save Button -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabSavePlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="Save"
+                    android:src="@drawable/ic_heart_outline"
+                    app:elevation="4dp"
+                    app:fabSize="mini"
+                    app:tint="@color/gold_dark" />
+            </FrameLayout>
+
+            <!-- Main Content Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp">
+
+                <!-- Title and Area -->
+                <TextView
+                    android:id="@+id/tvDetailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="Kitab Khana &amp; Boutique Cafe" />
+
+                <TextView
+                    android:id="@+id/tvDetailArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/teal_secondary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="📍 Flora Fountain / Fort, South Mumbai" />
+
+                <!-- Quick Attributes Row (Cost, Hours, Quietness) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <!-- Cost -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/gold_light"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvDetailCost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gold_dark"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            tools:text="₹0 (Free)" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estimated Cost"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <!-- Timing -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/teal_pale"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvDetailHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/teal_secondary"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="8 AM - 9 PM" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visiting Hours"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <!-- Quiet Level -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvDetailQuietness"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/forest_green_primary"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="Very Quiet" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vibe / Silence"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Facilities Chips Container -->
+                <LinearLayout
+                    android:id="@+id/layoutFacilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <!-- WiFi Badge -->
+                    <TextView
+                        android:id="@+id/tvDetailWifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:drawableStart="@drawable/ic_wifi"
+                        android:drawablePadding="4dp"
+                        android:drawableTint="@color/forest_green_primary"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="WiFi"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Charging Badge -->
+                    <TextView
+                        android:id="@+id/tvDetailCharging"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:drawableStart="@drawable/ic_charging"
+                        android:drawablePadding="4dp"
+                        android:drawableTint="@color/forest_green_primary"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="Power Sockets"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Seating Badge -->
+                    <TextView
+                        android:id="@+id/tvDetailSeating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:drawableStart="@drawable/ic_seat"
+                        android:drawablePadding="4dp"
+                        android:drawableTint="@color/forest_green_primary"
+                        android:paddingStart="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="4dp"
+                        android:text="Quiet Seating"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="About this Discovery"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    tools:text="Built in 1870 with Venetian Gothic architecture, this historic library features a peaceful garden back courtyard where visitors and readers can sit beneath century-old trees." />
+
+                <!-- Insider Tip Card -->
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/SheherseCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/warm_ivory"
+                    app:strokeColor="@color/gold_light"
+                    app:strokeWidth="1.5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💡 Insider Tip &amp; Best Timing"
+                            android:textColor="@color/gold_dark"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDetailTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:lineSpacingExtra="2dp"
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp"
+                            tools:text="Head directly past the reading rooms to the secluded back courtyard. Grab a filter coffee across the street beforehand; the garden is open for contemplation and reading." />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Address & Best Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Location &amp; Visit Details"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/teal_secondary"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    tools:text="152, Mahatma Gandhi Road, Kala Ghoda, Fort, Mumbai 400001" />
+
+                <TextView
+                    android:id="@+id/tvDetailBestTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/forest_green_primary"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    tools:text="Best time to visit: Weekday mornings before 11 AM or sunset around 5:30 PM" />
+
+                <!-- Action Buttons: Directions, Share, Contact -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDetailDirections"
+                        style="@style/ShehersePrimaryButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="@string/directions"
+                        app:icon="@drawable/ic_directions" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDetailShare"
+                        style="@style/SheherseOutlineButton"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="@string/share"
+                        app:icon="@drawable/ic_share"
+                        app:iconTint="@color/forest_green_primary" />
+                </LinearLayout>
+
+                <!-- Add to My Day Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDetailAddToPlan"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/forest_green_pale"
+                    android:text="🗓️ Add to My Day Plan"
+                    android:textColor="@color/forest_green_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- Enquire / Connect Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDetailEnquire"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/teal_pale"
+                    android:text="@string/enquire_now"
+                    android:textColor="@color/teal_secondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <!-- Suggest Correction Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDetailReport"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:text="✍️ Suggest an Update or Correction"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

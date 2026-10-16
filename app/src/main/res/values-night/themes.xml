@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Sheherse" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/teal_light</item>
+        <item name="colorOnPrimary">@color/forest_green_dark</item>
+        <item name="colorSecondary">@color/gold_primary</item>
+        <item name="colorOnSecondary">@color/forest_green_dark</item>
+        <item name="android:colorBackground">#121915</item>
+        <item name="colorSurface">#1B2420</item>
+        <item name="colorOnSurface">#E6EFEA</item>
+        <item name="android:statusBarColor">#0F1512</item>
+    </style>
+</resources>

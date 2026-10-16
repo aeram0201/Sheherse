@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Sheherse</string>
+    <string name="app_tagline">Discover Mumbai: Heritage, Hidden Gems &amp; Budget Living</string>
+    <string name="tagline">Discover Mumbai: Heritage, Hidden Gems &amp; Budget Living</string>
+    <string name="app_subtitle">The authentic insider guide for explorers, students &amp; travelers</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_saved">Saved</string>
+    <string name="nav_planner">My Plan</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Roles -->
+    <string name="role_explorer">Explorer (Tourist / Student)</string>
+    <string name="role_guide">Tourist Guide</string>
+    <string name="role_owner">Place Owner</string>
+    <string name="role_demo">Demo Mode</string>
+    <string name="active_role">Active Profile</string>
+
+    <!-- Common Actions -->
+    <string name="directions">Directions</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="estimate_label">Estimated</string>
+    <string name="search_hint">Search places, areas, tags (e.g. Fort, café)...</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    <string name="view_all">View All</string>
+    <string name="enquire_now">Contact / Enquire</string>
+    <string name="report_inaccurate">Report Inaccurate Info</string>
+    <string name="add_stop">Add Stop</string>
+
+    <!-- Categories and Headers -->
+    <string name="explore_categories">Explore Categories</string>
+    <string name="cat_hidden_gems">Hidden Gems</string>
+    <string name="cat_study_work">Study &amp; Work</string>
+    <string name="cat_budget_food">Affordable Food</string>
+    <string name="cat_events">Events &amp; Walks</string>
+    <string name="cat_community">Community</string>
+    <string name="featured_places">Featured Discoveries</string>
+    <string name="explore_mumbai">Explore Mumbai</string>
+    <string name="saved_places">Saved Discoveries</string>
+    <string name="no_saved_places">No saved places yet</string>
+    <string name="no_saved_places_subtitle">Tap the heart icon on any card to save it for your Mumbai journey.</string>
+    <string name="planner_title">Itinerary Planner</string>
+    <string name="profile_title">Profile &amp; Settings</string>
+
+    <!-- Quick Actions -->
+    <string name="action_hidden_gems">Hidden Gems</string>
+    <string name="action_study_work">Study &amp; Work</string>
+    <string name="action_food">Affordable Food</string>
+    <string name="action_events">Events &amp; Walks</string>
+    <string name="action_community">Community</string>
+    <string name="action_guide_hub">Guide Dashboard</string>
+    <string name="action_owner_hub">Owner Dashboard</string>
+
+    <!-- Status Badges -->
+    <string name="badge_sample">Sample</string>
+    <string name="badge_community">Community</string>
+    <string name="badge_verified">Verified</string>
+    <string name="badge_pending">Pending Review</string>
+    <string name="badge_approved">Approved</string>
+    <string name="badge_rejected">Rejected</string>
+
+    <!-- Auth & Demo Mode -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to discover secret Mumbai spots and itineraries</string>
+    <string name="register_title">Join Sheherse</string>
+    <string name="register_subtitle">Start your authentic Mumbai journey</string>
+    <string name="quick_demo_access">Instant Demo Access</string>
+    <string name="demo_switcher_title">Instant Role Switcher (One-Click Demo)</string>
+    <string name="demo_switcher_subtitle">Switch between roles instantly to preview all views, capabilities and dashboards</string>
+    <string name="login_as_explorer">Demo Explorer (Arjun Mehta)</string>
+    <string name="login_as_guide">Demo Guide (Farhan Qureshi)</string>
+    <string name="login_as_owner">Demo Owner (Pooja Desai)</string>
+</resources>
