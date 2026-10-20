@@ -11,8 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sheherse.adapter.PlaceAdapter;
 import com.example.sheherse.data.PlaceRepository;
+import com.example.sheherse.model.Itinerary;
+import com.example.sheherse.model.ItineraryStop;
 import com.example.sheherse.model.Place;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +32,7 @@ public class CategoryListActivity extends AppCompatActivity {
     public static final String TYPE_HIDDEN_GEMS = "HIDDEN_GEMS";
     public static final String TYPE_STUDY_WORK = "STUDY_WORK";
     public static final String TYPE_AFFORDABLE_FOOD = "AFFORDABLE_FOOD";
+    public static final String TYPE_FIRST_TIME = "FIRST_TIME";
     public static final String TYPE_HISTORICAL = "HISTORICAL";
     public static final String TYPE_CULTURAL = "CULTURAL";
     public static final String TYPE_NATURE = "NATURE";
@@ -36,6 +43,11 @@ public class CategoryListActivity extends AppCompatActivity {
     private TextView tvCategoryCount;
     private RecyclerView rvCategoryPlaces;
     private View layoutCategoryEmpty;
+
+    private MaterialCardView cardFirstTimeTransitTips;
+    private MaterialButton btnPlanFirstDay;
+    private MaterialCardView cardHiddenGemsSubmitBanner;
+    private MaterialButton btnSubmitGemFromCategory;
 
     private PlaceRepository placeRepository;
     private PlaceAdapter placeAdapter;
@@ -59,6 +71,33 @@ public class CategoryListActivity extends AppCompatActivity {
         rvCategoryPlaces = findViewById(R.id.rvCategoryPlaces);
         layoutCategoryEmpty = findViewById(R.id.layoutCategoryEmpty);
 
+        cardFirstTimeTransitTips = findViewById(R.id.cardFirstTimeTransitTips);
+        btnPlanFirstDay = findViewById(R.id.btnPlanFirstDay);
+        cardHiddenGemsSubmitBanner = findViewById(R.id.cardHiddenGemsSubmitBanner);
+        btnSubmitGemFromCategory = findViewById(R.id.btnSubmitGemFromCategory);
+
+        if (btnPlanFirstDay != null) {
+            btnPlanFirstDay.setOnClickListener(v -> {
+                Itinerary itin = new Itinerary("itin_first_time_" + System.currentTimeMillis(), "First Time in Mumbai Essentials", 350, null);
+                String[] presetIds = {"place_marine_drive", "place_kyani", "place_asiatic_steps", "place_horniman_circle"};
+                int order = 0;
+                for (String id : presetIds) {
+                    Place p = placeRepository.getPlaceById(id);
+                    if (p != null) {
+                        itin.getStops().add(new ItineraryStop("stop_" + order, p, order));
+                        order++;
+                    }
+                }
+                placeRepository.saveItinerary(itin);
+                Toast.makeText(this, "Loaded First Time in Mumbai trail into Planner!", Toast.LENGTH_SHORT).show();
+                finish();
+            });
+        }
+
+        if (btnSubmitGemFromCategory != null) {
+            btnSubmitGemFromCategory.setOnClickListener(v -> startActivity(new Intent(this, CommunityActivity.class)));
+        }
+
         toolbarCategory.setNavigationOnClickListener(v -> finish());
 
         rvCategoryPlaces.setLayoutManager(new LinearLayoutManager(this));
@@ -77,11 +116,31 @@ public class CategoryListActivity extends AppCompatActivity {
 
         if (type == null) type = TYPE_ALL;
 
+        if (cardFirstTimeTransitTips != null) {
+            cardFirstTimeTransitTips.setVisibility(TYPE_FIRST_TIME.equals(type) ? View.VISIBLE : View.GONE);
+        }
+        if (cardHiddenGemsSubmitBanner != null) {
+            cardHiddenGemsSubmitBanner.setVisibility(TYPE_HIDDEN_GEMS.equals(type) ? View.VISIBLE : View.GONE);
+        }
+
         filteredPlaces.clear();
         String title;
         String subtitle;
 
-        if (TYPE_HIDDEN_GEMS.equals(type)) {
+        if (TYPE_FIRST_TIME.equals(type)) {
+            title = "First Time in Mumbai? • Welcome!";
+            subtitle = "Essential must-visit landmarks, transit hacks, iconic food spots, and a day plan for first-time visitors to the city.";
+            // Surface a curated mix: iconic, historical, sunset, and food spots
+            for (Place p : placeRepository.getAllPlaces()) {
+                String cat = p.getCategory();
+                if ("Historical".equalsIgnoreCase(cat)
+                        || "Cultural".equalsIgnoreCase(cat)
+                        || "Sunset".equalsIgnoreCase(cat)
+                        || ("Food".equalsIgnoreCase(cat) && "VERIFIED".equalsIgnoreCase(p.getVerificationStatus()))) {
+                    filteredPlaces.add(p);
+                }
+            }
+        } else if (TYPE_HIDDEN_GEMS.equals(type)) {
             title = "Hidden Gems • मुंबई की गुप्त गलियां";
             subtitle = "Lesser-known neighbourhood marvels, quiet heritage enclaves, and secluded corners away from usual tourist trails.";
             filteredPlaces.addAll(placeRepository.getHiddenGems());

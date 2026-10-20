@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Kala Ghoda sky and lush green courtyard garden background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:centerColor="#D8F3DC"
+                android:endColor="#1B4332"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Venetian Gothic yellow Malad stone facade -->
+    <item android:left="30dp" android:right="30dp" android:top="20dp" android:bottom="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F5EE9E" />
+            <corners android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+        </shape>
+    </item>
+    <!-- Central clock tower / gable -->
+    <item android:left="140dp" android:right="140dp" android:top="5dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37" />
+            <corners android:topLeftRadius="12dp" android:topRightRadius="12dp" />
+        </shape>
+    </item>
+    <!-- Clock circle -->
+    <item android:left="165dp" android:right="165dp" android:top="15dp" android:bottom="190dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- Pointed Venetian Gothic arched windows -->
+    <item android:left="60dp" android:right="250dp" android:top="45dp" android:bottom="125dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:topLeftRadius="25dp" android:topRightRadius="25dp" />
+        </shape>
+    </item>
+    <item android:left="150dp" android:right="150dp" android:top="45dp" android:bottom="125dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:topLeftRadius="25dp" android:topRightRadius="25dp" />
+        </shape>
+    </item>
+    <item android:left="250dp" android:right="60dp" android:top="45dp" android:bottom="125dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:topLeftRadius="25dp" android:topRightRadius="25dp" />
+        </shape>
+    </item>
+    <!-- Lush rear garden lawn with foliage where students read -->
+    <item android:top="130dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#2D6A4F"
+                android:endColor="#081C15"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Wrought iron garden bench in foreground -->
+    <item android:left="100dp" android:right="100dp" android:top="155dp" android:bottom="45dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <item android:left="115dp" android:right="115dp" android:top="165dp" android:bottom="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#451A03" />
+        </shape>
+    </item>
+</layer-list>

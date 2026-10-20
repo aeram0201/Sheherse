@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dawn harbor morning glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#1D4ED8"
+                android:centerColor="#7C3AED"
+                android:endColor="#E05A47"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Dock water with sunrise shimmer -->
+    <item android:top="130dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#1B4332"
+                android:endColor="#081C15"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Giant Warehouse with St+art India vibrant colorful mural -->
+    <item android:left="30dp" android:right="140dp" android:top="35dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#E05A47"
+                android:centerColor="#D4AF37"
+                android:endColor="#40916C"
+                android:angle="45" />
+            <corners android:topLeftRadius="6dp" android:topRightRadius="6dp" />
+        </shape>
+    </item>
+    <!-- Mural geometric abstract shapes on warehouse wall -->
+    <item android:left="50dp" android:right="230dp" android:top="55dp" android:bottom="115dp">
+        <shape android:shape="oval">
+            <solid android:color="#1D4ED8" />
+        </shape>
+    </item>
+    <item android:left="110dp" android:right="160dp" android:top="70dp" android:bottom="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Dock crane / mast silhouette -->
+    <item android:left="250dp" android:right="105dp" android:top="15dp" android:bottom="90dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <!-- Koli fishing boat silhouette -->
+    <item android:left="190dp" android:right="40dp" android:top="125dp" android:bottom="65dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+            <corners android:bottomLeftRadius="18dp" android:bottomRightRadius="18dp" />
+        </shape>
+    </item>
+    <!-- Boat mast and triangular sail -->
+    <item android:left="240dp" android:right="115dp" android:top="85dp" android:bottom="95dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <!-- Seagulls in morning sky -->
+    <item android:left="160dp" android:right="185dp" android:top="25dp" android:bottom="195dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <item android:left="180dp" android:right="165dp" android:top="20dp" android:bottom="200dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Mumbai street food energetic amber / spicy red background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FEF3C7"
+                android:centerColor="#D97706"
+                android:endColor="#7C2D12"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Giant cast-iron frying kadai / stall counter -->
+    <item android:top="110dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#19201D" />
+        </shape>
+    </item>
+    <!-- Soft butter-slashed Pav bread bun -->
+    <item android:left="80dp" android:right="160dp" android:top="65dp" android:bottom="75dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FDF6E2" />
+            <corners android:radius="14dp" />
+        </shape>
+    </item>
+    <item android:left="80dp" android:right="160dp" android:top="65dp" android:bottom="105dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37" />
+            <corners android:topLeftRadius="14dp" android:topRightRadius="14dp" />
+        </shape>
+    </item>
+    <!-- Golden fried spiced potato Batata Vada nestled inside -->
+    <item android:left="105dp" android:right="185dp" android:top="80dp" android:bottom="85dp">
+        <shape android:shape="oval">
+            <solid android:color="#D97706" />
+        </shape>
+    </item>
+    <!-- Fiery red garlic chutney spread -->
+    <item android:left="95dp" android:right="175dp" android:top="95dp" android:bottom="95dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#DC2626" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Ashok's signature crunchy golden batter 'choora' flakes scattered around -->
+    <item android:left="60dp" android:right="280dp" android:top="125dp" android:bottom="95dp"><shape android:shape="oval"><solid android:color="#F5EE9E" /></shape></item>
+    <item android:left="180dp" android:right="160dp" android:top="120dp" android:bottom="100dp"><shape android:shape="oval"><solid android:color="#F5EE9E" /></shape></item>
+    <item android:left="200dp" android:right="140dp" android:top="128dp" android:bottom="92dp"><shape android:shape="oval"><solid android:color="#F5EE9E" /></shape></item>
+    <item android:left="220dp" android:right="120dp" android:top="122dp" android:bottom="98dp"><shape android:shape="oval"><solid android:color="#F5EE9E" /></shape></item>
+    <!-- Fried green chilli on the side -->
+    <item android:left="230dp" android:right="60dp" android:top="95dp" android:bottom="115dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#059669" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.sheherse.R;
 import com.example.sheherse.data.PlaceRepository;
 import com.example.sheherse.model.Place;
+import com.example.sheherse.util.PlaceImages;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -84,6 +86,7 @@ public class PlaceAdapter
 
     class PlaceViewHolder extends RecyclerView.ViewHolder {
 
+        private final ImageView ivPlaceHero;
         private final TextView tvPlaceCategory;
         private final TextView tvPlaceStatusBadge;
         private final ImageButton btnSavePlace;
@@ -104,6 +107,8 @@ public class PlaceAdapter
         public PlaceViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            ivPlaceHero =
+                    itemView.findViewById(R.id.ivPlaceHero);
             tvPlaceCategory =
                     itemView.findViewById(R.id.tvPlaceCategory);
             tvPlaceStatusBadge =
@@ -148,6 +153,11 @@ public class PlaceAdapter
         }
 
         public void bind(Place place) {
+
+            // Hero image
+            if (ivPlaceHero != null) {
+                ivPlaceHero.setImageResource(PlaceImages.getPlaceImageRes(place));
+            }
 
             tvPlaceName.setText(safeText(place.getName(), "Unnamed place"));
             tvPlaceArea.setText(safeText(place.getArea(), "Mumbai"));

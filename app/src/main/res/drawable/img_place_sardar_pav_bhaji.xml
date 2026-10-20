@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Late-night Tardeo street food buzz background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#7F1D1D"
+                android:centerColor="#B91C1C"
+                android:endColor="#450A0A"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Deep stainless steel serving plate -->
+    <item android:left="30dp" android:right="30dp" android:top="50dp" android:bottom="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#E2E8F0" />
+        </shape>
+    </item>
+    <!-- Rich spicy red slow-simmered Pav Bhaji -->
+    <item android:left="45dp" android:right="45dp" android:top="60dp" android:bottom="30dp">
+        <shape android:shape="oval">
+            <solid android:color="#DC2626" />
+        </shape>
+    </item>
+    <!-- Sardar's world-famous HUGE slab of cold yellow Amul butter slowly melting into a lake -->
+    <item android:left="115dp" android:right="115dp" android:top="85dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FEF08A" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <!-- Pool of melted liquid golden butter glistening around it -->
+    <item android:left="90dp" android:right="90dp" android:top="75dp" android:bottom="75dp">
+        <shape android:shape="oval">
+            <stroke android:color="#FBBF24" android:width="6dp" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+    <!-- Fresh chopped coriander and red onion garnish ring -->
+    <item android:left="100dp" android:right="220dp" android:top="135dp" android:bottom="75dp"><shape android:shape="oval"><solid android:color="#15803D" /></shape></item>
+    <item android:left="220dp" android:right="100dp" android:top="135dp" android:bottom="75dp"><shape android:shape="oval"><solid android:color="#F43F5E" /></shape></item>
+    <!-- Lemon wedge -->
+    <item android:left="160dp" android:right="160dp" android:top="145dp" android:bottom="65dp"><shape android:shape="oval"><solid android:color="#FACC15" /></shape></item>
+</layer-list>

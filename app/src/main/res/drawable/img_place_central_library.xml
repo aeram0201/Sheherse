@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Soaring archival library hall warm interior -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:centerColor="#D8F3DC"
+                android:endColor="#1B4332"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Soaring high vaulted wooden ceiling rafters -->
+    <item android:left="30dp" android:right="30dp" android:top="15dp" android:bottom="180dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Deep floor-to-ceiling wooden archival book stacks -->
+    <item android:left="30dp" android:right="230dp" android:top="45dp" android:bottom="45dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#451A03" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item android:left="230dp" android:right="30dp" android:top="45dp" android:bottom="45dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#451A03" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Multi-tier book spine collections -->
+    <item android:left="40dp" android:right="240dp" android:top="60dp" android:bottom="140dp"><shape android:shape="rectangle"><solid android:color="#D4AF37" /></shape></item>
+    <item android:left="40dp" android:right="240dp" android:top="105dp" android:bottom="95dp"><shape android:shape="rectangle"><solid android:color="#059669" /></shape></item>
+    <item android:left="40dp" android:right="240dp" android:top="150dp" android:bottom="50dp"><shape android:shape="rectangle"><solid android:color="#DC2626" /></shape></item>
+    <item android:left="240dp" android:right="40dp" android:top="60dp" android:bottom="140dp"><shape android:shape="rectangle"><solid android:color="#D4AF37" /></shape></item>
+    <item android:left="240dp" android:right="40dp" android:top="105dp" android:bottom="95dp"><shape android:shape="rectangle"><solid android:color="#1D4ED8" /></shape></item>
+    <item android:left="240dp" android:right="40dp" android:top="150dp" android:bottom="50dp"><shape android:shape="rectangle"><solid android:color="#059669" /></shape></item>
+    <!-- Central long polished oak communal study desk with green glass banker lamps -->
+    <item android:left="110dp" android:right="110dp" android:top="125dp" android:bottom="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+            <corners android:topLeftRadius="6dp" android:topRightRadius="6dp" />
+        </shape>
+    </item>
+    <!-- Emerald green glass study lamp shades on desk -->
+    <item android:left="145dp" android:right="185dp" android:top="100dp" android:bottom="115dp"><shape android:shape="oval"><solid android:color="#059669" /></shape></item>
+    <item android:left="185dp" android:right="145dp" android:top="100dp" android:bottom="115dp"><shape android:shape="oval"><solid android:color="#059669" /></shape></item>
+</layer-list>

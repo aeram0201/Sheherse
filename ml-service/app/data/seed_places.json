@@ -1,0 +1,1222 @@
+[
+  {
+    "id": "place_sassoon_docks",
+    "name": "Sassoon Docks & Art Project",
+    "description": "One of the oldest wet docks in Mumbai, bustling with fishing trawlers at dawn and transformed by massive street art murals created by the St+art India Foundation.",
+    "category": "Cultural",
+    "area": "Colaba, South Mumbai",
+    "address": "Sassoon Dock Road, Colaba, Mumbai 400005",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 90,
+    "latitude": 18.9137,
+    "longitude": 72.8225,
+    "tags": [
+      "Street Art",
+      "Fishermen",
+      "Photography",
+      "Historic"
+    ],
+    "facilities": [
+      "Seating",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Lively",
+    "rating": 4.6,
+    "openingHours": "5:00 AM – 7:00 PM",
+    "insiderTip": "Arrive around 6:30 AM to see the lively Koli fish auctions followed by the vibrant outdoor murals in morning light.",
+    "menu_items": []
+  },
+  {
+    "id": "place_banganga",
+    "name": "Banganga Tank & Walkeshwar",
+    "description": "An ancient freshwater cistern dating back to the 12th-century Silhara dynasty, encircled by old temples, stone steps, and quiet alleyways echoing ancient mythology.",
+    "category": "Historical",
+    "area": "Malabar Hill, South Mumbai",
+    "address": "Teen Batti, Walkeshwar, Malabar Hill, Mumbai 400006",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 60,
+    "latitude": 18.9452,
+    "longitude": 72.7937,
+    "tags": [
+      "Heritage",
+      "Cistern",
+      "Quiet",
+      "Temples"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.7,
+    "openingHours": "6:00 AM – 8:00 PM",
+    "insiderTip": "Feed the resident geese and sit on the east steps for an oasis of absolute calm amidst the city hustle.",
+    "menu_items": []
+  },
+  {
+    "id": "place_khotachiwadi",
+    "name": "Khotachiwadi Heritage Village",
+    "description": "A protected heritage hamlet featuring 19th-century Portuguese-style wooden cottages with verandahs, exterior staircases, and vibrant painted facades tucked inside Girgaon.",
+    "category": "Historical",
+    "area": "Girgaon, South Mumbai",
+    "address": "Khotachiwadi, Girgaon, Mumbai 400004",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 60,
+    "latitude": 18.9547,
+    "longitude": 72.8183,
+    "tags": [
+      "Architecture",
+      "Portuguese",
+      "Heritage",
+      "Walk"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.5,
+    "openingHours": "Open 24 hours",
+    "insiderTip": "Visit 47-A gallery for contemporary design exhibitions set inside a restored vintage home.",
+    "menu_items": []
+  },
+  {
+    "id": "place_sassoon_library",
+    "name": "David Sassoon Library & Reading Room",
+    "description": "A striking Venetian Gothic heritage library built in 1870, surrounded by a lush green garden courtyard in the heart of Kala Ghoda, ideal for quiet reading and study.",
+    "category": "Study",
+    "area": "Kala Ghoda, Fort",
+    "address": "152, Mahatma Gandhi Road, Kala Ghoda, Fort, Mumbai 400001",
+    "estimatedCost": 50,
+    "priceEstimated": true,
+    "durationMinutes": 120,
+    "latitude": 18.9287,
+    "longitude": 72.8322,
+    "tags": [
+      "Study",
+      "Library",
+      "Heritage",
+      "Garden"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "Quiet",
+      "AC"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.8,
+    "openingHours": "8:00 AM – 9:00 PM",
+    "insiderTip": "Day passes are available for students and researchers. The garden courtyard is breezy and perfect for study sessions.",
+    "menu_items": []
+  },
+  {
+    "id": "place_kitab_khana",
+    "name": "Kitab Khana & Somethings Gourmet Cafe",
+    "description": "A magnificent 150-year-old colonial building housing Mumbai's most beloved independent bookstore with high ceilings, teakwood shelves, and a peaceful boutique in-house cafe.",
+    "category": "Study",
+    "area": "Fort, South Mumbai",
+    "address": "Somaiya Bhavan, 45/47, MG Road, Flora Fountain, Fort, Mumbai 400001",
+    "estimatedCost": 200,
+    "priceEstimated": true,
+    "durationMinutes": 90,
+    "latitude": 18.9328,
+    "longitude": 72.8329,
+    "tags": [
+      "Bookstore",
+      "Cafe",
+      "Study",
+      "Colonial"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "AC",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": true,
+    "cuisineType": "Cafe",
+    "quietnessLevel": "Moderate",
+    "rating": 4.9,
+    "openingHours": "10:30 AM – 7:30 PM",
+    "insiderTip": "Try their fresh cinnamon rolls and herbal tea while studying at the corner mezzanine desks.",
+    "menu_items": [
+      {
+        "name": "Artisanal Cappuccino & Almond Biscotti",
+        "price_inr": 180,
+        "is_price_available": true,
+        "dietary_type": "BEVERAGE",
+        "description": "Freshly roasted Arabica espresso with velvety milk foam and house biscotti.",
+        "recommendation_reason": "Perfect pairing while reading in the high-ceilinged bookstore.",
+        "source_provenance": "Somethings Gourmet Cafe Menu (Curated 2026)"
+      },
+      {
+        "name": "Grilled Pesto & Bocconcini Panini",
+        "price_inr": 240,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Basil pesto, fresh bocconcini cheese, and ripe tomato pressed in sourdough.",
+        "recommendation_reason": "Wholesome, quiet light lunch in Fort.",
+        "source_provenance": "Somethings Gourmet Cafe Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_asiatic_steps",
+    "name": "Asiatic Society Library Steps & Town Hall",
+    "description": "Neoclassical architectural marvel with sweeping stone steps overlooking Horniman Circle. A favorite meeting spot for students, readers, photographers, and thinkers.",
+    "category": "Historical",
+    "area": "Fort, South Mumbai",
+    "address": "Town Hall, Shahid Bhagat Singh Rd, Fort, Mumbai 400023",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 45,
+    "latitude": 18.9317,
+    "longitude": 72.8358,
+    "tags": [
+      "Neoclassical",
+      "Town Hall",
+      "Steps",
+      "Sunset"
+    ],
+    "facilities": [
+      "Seating",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Moderate",
+    "rating": 4.7,
+    "openingHours": "10:00 AM – 5:00 PM (Steps open 24/7)",
+    "insiderTip": "Sit on the highest steps just before sunset to watch the vintage red BEST buses circle Horniman Circle.",
+    "menu_items": []
+  },
+  {
+    "id": "place_kyani",
+    "name": "Kyani & Co. Bakery & Irani Chai",
+    "description": "Operating continuously since 1904, this legendary Irani cafe serves crisp Bun Maska, hot spicy Kheema Pav, caramel custard, and cutting chai under vintage glass mirrors.",
+    "category": "Food",
+    "area": "Marine Lines, South Mumbai",
+    "address": "Jermahal Estate, 657, JSS Rd, Marine Lines, Mumbai 400002",
+    "estimatedCost": 80,
+    "priceEstimated": true,
+    "durationMinutes": 45,
+    "latitude": 18.9431,
+    "longitude": 72.8272,
+    "tags": [
+      "Irani Cafe",
+      "Bun Maska",
+      "Budget Food",
+      "Heritage"
+    ],
+    "facilities": [
+      "Seating",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Parsi/Irani",
+    "quietnessLevel": "Lively",
+    "rating": 4.7,
+    "openingHours": "7:00 AM – 8:30 PM",
+    "insiderTip": "Dip fresh brun pav into hot Irani chai and don't miss the Parsi mawa cake from the bakery counter.",
+    "ownerId": "owner_kyani",
+    "menu_items": [
+      {
+        "name": "Bun Maska & Irani Chai",
+        "price_inr": 60,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Fresh crusty bun with salted Amul butter paired with slow-brewed sweet Irani cutting chai.",
+        "recommendation_reason": "Signature breakfast combo served continuously since 1904.",
+        "source_provenance": "Kyani & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Parsi Mawa Cake",
+        "price_inr": 35,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Cardamom-scented dense sponge cake baked fresh in heritage ovens.",
+        "recommendation_reason": "Iconic Mumbai takeaway cake.",
+        "source_provenance": "Kyani & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Chicken Farcha",
+        "price_inr": 160,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Spiced fried chicken coated in crispy egg-laced batter.",
+        "recommendation_reason": "Quintessential Parsi feast classic.",
+        "source_provenance": "Kyani & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Kheema Pav",
+        "price_inr": 140,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Spicy minced mutton gravy served with hot ladi pav.",
+        "recommendation_reason": "Beloved spicy Mumbai morning staple.",
+        "source_provenance": "Kyani & Co. In-House Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_britannia",
+    "name": "Britannia & Co. Restaurant",
+    "description": "Historic Parsi-Irani restaurant in the charming colonial Ballard Estate, celebrated worldwide for its iconic Berry Pulao, Sali Boti, and chilled Raspberry Soda.",
+    "category": "Food",
+    "area": "Ballard Estate, Fort",
+    "address": "Wakefield House, 11, Sprott Rd, Ballard Estate, Fort, Mumbai 400001",
+    "estimatedCost": 280,
+    "priceEstimated": true,
+    "durationMinutes": 60,
+    "latitude": 18.9365,
+    "longitude": 72.8402,
+    "tags": [
+      "Berry Pulao",
+      "Parsi",
+      "Heritage",
+      "Ballard Estate"
+    ],
+    "facilities": [
+      "Seating",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Parsi/Irani",
+    "quietnessLevel": "Moderate",
+    "rating": 4.6,
+    "openingHours": "11:30 AM – 4:00 PM (Closed Sundays)",
+    "insiderTip": "Order the Mutton Berry Pulao with sweet Iranian berries and wash it down with Duke's raspberry soda.",
+    "menu_items": [
+      {
+        "name": "Mutton Berry Pulao",
+        "price_inr": 450,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Fragrant basmati rice crowned with Iranian barberries (zereshk) and slow-braised mutton.",
+        "recommendation_reason": "Legendary dish created by late Mr. Boman Kohinoor.",
+        "source_provenance": "Britannia & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Veg Berry Pulao",
+        "price_inr": 350,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Barberry rice tossed with paneer, spiced vegetables, and cashews.",
+        "recommendation_reason": "Rich vegetarian adaptation of the Persian classic.",
+        "source_provenance": "Britannia & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Sali Boti with Pav",
+        "price_inr": 380,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Sweet and tangy mutton curry blanketed with crisp potato shoestrings.",
+        "recommendation_reason": "Authentic Parsi sweet-sour flavor profile.",
+        "source_provenance": "Britannia & Co. In-House Menu (Curated 2026)"
+      },
+      {
+        "name": "Caramel Custard",
+        "price_inr": 120,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Steamed golden egg custard dripping with amber caramel sauce.",
+        "recommendation_reason": "The gold standard of Mumbai caramel custards.",
+        "source_provenance": "Britannia & Co. In-House Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_ashok_vada_pav",
+    "name": "Ashok Vada Pav (Kirti College)",
+    "description": "Mumbai's benchmark vada pav stall running for over 40 years. Renowned for its golden crispy 'choora' (batter flakes) blended into secret spicy chutneys.",
+    "category": "Food",
+    "area": "Prabhadevi, Central Mumbai",
+    "address": "Kashinath Dhuru Marg, Off Veer Savarkar Marg, Prabhadevi, Mumbai 400028",
+    "estimatedCost": 35,
+    "priceEstimated": false,
+    "durationMinutes": 20,
+    "latitude": 19.0163,
+    "longitude": 72.8306,
+    "tags": [
+      "Vada Pav",
+      "Street Food",
+      "Iconic",
+      "Budget"
+    ],
+    "facilities": [],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Vada Pav & Chaat",
+    "quietnessLevel": "Lively",
+    "rating": 4.9,
+    "openingHours": "11:00 AM – 9:00 PM",
+    "insiderTip": "Ask for extra crispy 'choora' with garlic chutney for the signature crunch.",
+    "menu_items": [
+      {
+        "name": "Kirti College Special Vada Pav",
+        "price_inr": 30,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Hot potato vada packed into soft pav with spicy red garlic chutney and crisp besan chura.",
+        "recommendation_reason": "Frequently voted Mumbai’s number one street vada pav.",
+        "source_provenance": "Ashok Stall Tariff (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_cannon_pav_bhaji",
+    "name": "Cannon Pav Bhaji (CST)",
+    "description": "Situated right across the Gothic facade of CSMT terminus, serving piping-hot Amul butter pav bhaji with caramelized onions and tangy lemons to commuters since 1975.",
+    "category": "Food",
+    "area": "CST Station, Fort",
+    "address": "Dadabhai Naoroji Rd, Opposite CST Station, Mumbai 400001",
+    "estimatedCost": 120,
+    "priceEstimated": false,
+    "durationMinutes": 30,
+    "latitude": 18.9406,
+    "longitude": 72.8354,
+    "tags": [
+      "Pav Bhaji",
+      "Butter",
+      "Street Food",
+      "CST"
+    ],
+    "facilities": [
+      "Seating"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Vada Pav & Chaat",
+    "quietnessLevel": "Lively",
+    "rating": 4.5,
+    "openingHours": "7:00 AM – 11:00 PM",
+    "insiderTip": "Pair with a fresh glass of chilled mosambi (sweet lime) juice from the next-door stall.",
+    "menu_items": [
+      {
+        "name": "Amul Butter Pav Bhaji",
+        "price_inr": 140,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Spiced tomato vegetable mash topped with melted butter, chopped onions, and lemon with two pavs.",
+        "recommendation_reason": "Legendary quick meal opposite CSMT station.",
+        "source_provenance": "Cannon Refreshments Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_guru_kripa",
+    "name": "Guru Kripa Samosa & Chole",
+    "description": "Mumbai's supreme samosa haven in the historic Sindhi colony of Sion. Famous for huge, piping hot samosas drowned in tangy slow-cooked chole and sweet tamarind sauce.",
+    "category": "Food",
+    "area": "Sion, Central Mumbai",
+    "address": "40, Guru Kripa Building, Road No 24, Sion West, Mumbai 400022",
+    "estimatedCost": 60,
+    "priceEstimated": false,
+    "durationMinutes": 30,
+    "latitude": 19.0397,
+    "longitude": 72.8624,
+    "tags": [
+      "Samosa",
+      "Chole",
+      "Sindhi",
+      "Budget Food"
+    ],
+    "facilities": [
+      "Seating",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Vada Pav & Chaat",
+    "quietnessLevel": "Lively",
+    "rating": 4.7,
+    "openingHours": "8:00 AM – 10:30 PM",
+    "insiderTip": "They supply samosas to single-screen cinema halls across Mumbai! Get the Samosa Chole with crushed onions.",
+    "menu_items": [
+      {
+        "name": "Samosa Chole",
+        "price_inr": 60,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Two crushed crispy samosas drenched in thick spiced Sindhi chole with tamarind chutney.",
+        "recommendation_reason": "Supplies samosas to famous Mumbai cinema halls for decades.",
+        "source_provenance": "Guru Kripa Menu (Curated 2026)"
+      },
+      {
+        "name": "Dal Pakwan",
+        "price_inr": 70,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Crispy cumin crackers served with spicy chana dal and chopped onion chutney.",
+        "recommendation_reason": "Traditional authentic Sindhi breakfast.",
+        "source_provenance": "Guru Kripa Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_dadar_flowers",
+    "name": "Dadar Flower Market (Phool Galli)",
+    "description": "A mesmerizing kaleidoscope of marigolds, jasmine, roses, and orchids sold by thousands of vendors right beneath the Dadar station flyover at break of dawn.",
+    "category": "Market",
+    "area": "Dadar West",
+    "address": "Senapati Bapat Marg, Dadar West, Mumbai 400028",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 60,
+    "latitude": 19.0189,
+    "longitude": 72.8427,
+    "tags": [
+      "Flowers",
+      "Dawn",
+      "Sensory",
+      "Photography"
+    ],
+    "facilities": [],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Lively",
+    "rating": 4.6,
+    "openingHours": "4:00 AM – 9:00 AM",
+    "insiderTip": "Bring your camera between 5:30 AM and 6:30 AM when the morning dew glimmers on mountains of orange marigolds.",
+    "menu_items": []
+  },
+  {
+    "id": "place_sewri_mangroves",
+    "name": "Sewri Mangrove Park & Mudflats",
+    "description": "Expansive mudflats and mangrove forest on the eastern seafront where tens of thousands of migratory Lesser and Greater Flamingos gather against industrial dock cranes.",
+    "category": "Nature",
+    "area": "Sewri, East Mumbai",
+    "address": "Sewri Fort Road, Sewri, Mumbai 400015",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 90,
+    "latitude": 18.9984,
+    "longitude": 72.8601,
+    "tags": [
+      "Flamingos",
+      "Nature",
+      "Mudflats",
+      "Birdwatching"
+    ],
+    "facilities": [
+      "Quiet"
+    ],
+    "verificationStatus": "SAMPLE",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.4,
+    "openingHours": "6:00 AM – 6:30 PM",
+    "insiderTip": "Check the Mumbai tide tables: low tide exposes mudflats where flamingos feed closest to the shore.",
+    "menu_items": []
+  },
+  {
+    "id": "place_gilbert_hill",
+    "name": "Gilbert Hill Volcanic Monolith",
+    "description": "A sheer 200-foot column of black basalt rock created 66 million years ago from Mesozoic volcanic activity, predating human civilization with twin temples atop.",
+    "category": "Nature",
+    "area": "Andheri West, Suburbs",
+    "address": "Sagar City, Andheri West, Mumbai 400058",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 60,
+    "latitude": 19.1207,
+    "longitude": 72.8398,
+    "tags": [
+      "Geology",
+      "Ancient",
+      "Panoramic View",
+      "Volcano"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.3,
+    "openingHours": "6:00 AM – 7:00 PM",
+    "insiderTip": "Climb the steep stone staircase for an incredible 360-degree sunset panorama over Mumbai's western suburban skyline.",
+    "menu_items": []
+  },
+  {
+    "id": "place_candies_bandra",
+    "name": "Candies (Pali Hill)",
+    "description": "A multi-tiered Portuguese villa turned into a sprawling artsy student sanctuary with mosaic courtyards, cozy reading nooks, and affordable bakery bites.",
+    "category": "Study",
+    "area": "Bandra West, Suburbs",
+    "address": "5AA Mac Ronells, Next to Learner's Academy, Pali Hill, Bandra West, Mumbai 400050",
+    "estimatedCost": 250,
+    "priceEstimated": true,
+    "durationMinutes": 120,
+    "latitude": 19.0631,
+    "longitude": 72.8291,
+    "tags": [
+      "Cafe",
+      "Study Spot",
+      "Bandra",
+      "WiFi"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "Restroom",
+      "AC"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": true,
+    "cuisineType": "Cafe",
+    "quietnessLevel": "Moderate",
+    "rating": 4.6,
+    "openingHours": "8:30 AM – 10:00 PM",
+    "insiderTip": "Head to the rooftop terrace early on weekdays for fast Wi-Fi and discounted post-8PM pastry specials.",
+    "menu_items": [
+      {
+        "name": "Macaroni & Sweet Corn Salad",
+        "price_inr": 120,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Chilled pasta salad with crunchy capsicum, corn, and house cream dressing.",
+        "recommendation_reason": "Bandra youth staple since the 1990s.",
+        "source_provenance": "Candies Pali Hill Menu (Curated 2026)"
+      },
+      {
+        "name": "Chicken Mini Burgers (Plate of 2)",
+        "price_inr": 150,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Spiced chicken patties in miniature sesame buns with mint slaw.",
+        "recommendation_reason": "Fast, satisfying snack in the sprawling villa courtyard.",
+        "source_provenance": "Candies Pali Hill Menu (Curated 2026)"
+      },
+      {
+        "name": "Blended Iced Mocha",
+        "price_inr": 130,
+        "is_price_available": true,
+        "dietary_type": "BEVERAGE",
+        "description": "Thick blended iced chocolate espresso shake with dark chocolate drizzle.",
+        "recommendation_reason": "Refreshing cold coffee for Mumbai afternoons.",
+        "source_provenance": "Candies Pali Hill Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_marine_drive",
+    "name": "Marine Drive ('Queen\\'s Necklace')",
+    "description": "A 3.6-kilometer-long arc along the Arabian Sea lined with Art Deco buildings and tetrapods, Mumbai's iconic spot to catch the sea breeze and listen to the waves.",
+    "category": "Sunset",
+    "area": "South Mumbai",
+    "address": "Netaji Subhash Chandra Bose Road, Mumbai 400020",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 90,
+    "latitude": 18.9438,
+    "longitude": 72.8231,
+    "tags": [
+      "Sea Promenade",
+      "Art Deco",
+      "Sunset",
+      "Iconic"
+    ],
+    "facilities": [
+      "Seating"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Lively",
+    "rating": 4.9,
+    "openingHours": "Open 24 hours",
+    "insiderTip": "Sit on the promenade wall near Churchgate at dusk when the streetlights flick on in golden curves.",
+    "menu_items": []
+  },
+  {
+    "id": "place_drip_cafe",
+    "name": "Drip Specialty Cafe & Roastery",
+    "description": "Modern independent coffee house in Bandra catering to freelancers and remote coders with fast 100 Mbps Wi-Fi, abundant charging sockets, and artisanal pour-overs.",
+    "category": "Study",
+    "area": "Bandra West, Suburbs",
+    "address": "Chapel Road, Ranwar, Bandra West, Mumbai 400050",
+    "estimatedCost": 220,
+    "priceEstimated": true,
+    "durationMinutes": 150,
+    "latitude": 19.0558,
+    "longitude": 72.8285,
+    "tags": [
+      "Coffee",
+      "Study Spot",
+      "WiFi",
+      "Work"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "AC",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": true,
+    "cuisineType": "Cafe",
+    "quietnessLevel": "Silent",
+    "rating": 4.7,
+    "openingHours": "8:00 AM – 10:30 PM",
+    "insiderTip": "The quiet loft upstairs has dedicated single-study desks equipped with surge-protected universal power plugs.",
+    "menu_items": []
+  },
+  {
+    "id": "place_horniman_circle",
+    "name": "Horniman Circle Garden & Colonial Arcades",
+    "description": "A circular public park dating back to 1869 framed by magnificent colonnaded neo-classical crescent buildings, quiet stone paths, and shady banyan trees.",
+    "category": "Historical",
+    "area": "Fort, South Mumbai",
+    "address": "Horniman Circle, Kala Ghoda, Fort, Mumbai 400001",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 45,
+    "latitude": 18.9324,
+    "longitude": 72.8365,
+    "tags": [
+      "Heritage",
+      "Garden",
+      "Quiet Walk",
+      "Colonial"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.6,
+    "openingHours": "9:00 AM – 8:00 PM",
+    "insiderTip": "Sit on the heritage iron benches during lunch hours to read away from traffic sounds while watching flocks of pigeons.",
+    "menu_items": []
+  },
+  {
+    "id": "place_central_library",
+    "name": "Maharashtra Central Library (Town Hall)",
+    "description": "One of India's premier archival libraries with soaring vaulted ceilings, rows of oak reading tables, and access to over 800,000 preserved manuscripts.",
+    "category": "Study",
+    "area": "Fort, South Mumbai",
+    "address": "Town Hall, Shahid Bhagat Singh Rd, Fort, Mumbai 400023",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 180,
+    "latitude": 18.9319,
+    "longitude": 72.836,
+    "tags": [
+      "Library",
+      "Study Room",
+      "Silent",
+      "Academic"
+    ],
+    "facilities": [
+      "Charging",
+      "Seating",
+      "Quiet",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.8,
+    "openingHours": "10:00 AM – 6:00 PM (Closed 2nd & 4th Saturdays, Closed Sundays)",
+    "insiderTip": "Carry a valid college or government ID to obtain free daily visitor study passes for the ground floor silent reading hall.",
+    "menu_items": []
+  },
+  {
+    "id": "place_cafe_military",
+    "name": "Cafe Military (Irani & Parsi)",
+    "description": "Unpretentious Irani establishment established in 1933 in the banking heart of Fort. Renowned for slow-cooked Akuri, Mutton Sali Boti, caramel custard, and cutting chai.",
+    "category": "Food",
+    "area": "Fort, South Mumbai",
+    "address": "Ali Chamber, Tamind Lane, Fort, Mumbai 400001",
+    "estimatedCost": 140,
+    "priceEstimated": true,
+    "durationMinutes": 45,
+    "latitude": 18.9311,
+    "longitude": 72.8336,
+    "tags": [
+      "Irani",
+      "Parsi",
+      "Budget Food",
+      "Keema"
+    ],
+    "facilities": [
+      "Seating"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Parsi/Irani",
+    "quietnessLevel": "Lively",
+    "rating": 4.6,
+    "openingHours": "8:30 AM – 9:30 PM (Closed Sundays)",
+    "insiderTip": "Their Friday Mutton Dhansak served with brown caramelized rice is considered one of the best budget meals in town.",
+    "menu_items": [
+      {
+        "name": "Military Akuri with Pav",
+        "price_inr": 130,
+        "is_price_available": true,
+        "dietary_type": "NON_VEG",
+        "description": "Soft scrambled spiced eggs with onion, tomato, and fresh coriander served with pav.",
+        "recommendation_reason": "One of the last surviving authentic Irani cafes in Fort.",
+        "source_provenance": "Cafe Military Menu (Curated 2026)"
+      },
+      {
+        "name": "Caramel Custard",
+        "price_inr": 90,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Firm chilled egg caramel flan.",
+        "recommendation_reason": "Parsi dessert specialty.",
+        "source_provenance": "Cafe Military Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_b_merwan",
+    "name": "B. Merwan & Co. (Grant Road)",
+    "description": "Founded in 1914 opposite Grant Road station, this legendary bakery is world-renowned for piping-hot morning mawa cakes that sell out within 30 minutes of opening.",
+    "category": "Food",
+    "area": "Grant Road, South Mumbai",
+    "address": "Ali Mahomed Bldg, Opposite Grant Road Station East, Mumbai 400007",
+    "estimatedCost": 40,
+    "priceEstimated": false,
+    "durationMinutes": 25,
+    "latitude": 18.9632,
+    "longitude": 72.8164,
+    "tags": [
+      "Mawa Cake",
+      "Irani Chai",
+      "Historic Bakery",
+      "Budget"
+    ],
+    "facilities": [],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Parsi/Irani",
+    "quietnessLevel": "Lively",
+    "rating": 4.9,
+    "openingHours": "7:00 AM – 6:00 PM",
+    "insiderTip": "Reach by 7:15 AM sharp to secure fresh oven-warm Mawa Cakes before the office commuters clean out the shelves.",
+    "menu_items": [
+      {
+        "name": "Fresh Mawa Cake",
+        "price_inr": 30,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Warm cardamom-infused mawa sponge cake baked at 5:30 AM.",
+        "recommendation_reason": "Sells out within an hour of opening; historic Grant Road institution.",
+        "source_provenance": "B. Merwan Counter Menu (Curated 2026)"
+      },
+      {
+        "name": "Brun Maska & Special Chai",
+        "price_inr": 45,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Crusty local brun bread with salted butter dipped in hot kadak chai.",
+        "recommendation_reason": "Classic colonial railway commuter breakfast.",
+        "source_provenance": "B. Merwan Counter Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_sardar_pav_bhaji",
+    "name": "Sardar Refreshments (Tardeo)",
+    "description": "The undisputed king of decadent buttery Pav Bhaji in Mumbai since 1966. Prepared on a giant cast-iron tawa with melted Amul butter pools and toasted soft pav.",
+    "category": "Food",
+    "area": "Tardeo, Central Mumbai",
+    "address": "166-A, Tardeo Road, Junction, Tardeo, Mumbai 400034",
+    "estimatedCost": 160,
+    "priceEstimated": false,
+    "durationMinutes": 35,
+    "latitude": 18.9696,
+    "longitude": 72.8169,
+    "tags": [
+      "Pav Bhaji",
+      "Butter",
+      "Late Night",
+      "Iconic"
+    ],
+    "facilities": [
+      "Seating"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "Vada Pav & Chaat",
+    "quietnessLevel": "Lively",
+    "rating": 4.5,
+    "openingHours": "12:00 PM – 2:00 AM",
+    "insiderTip": "Ask for the 'Cheese Pav Bhaji' with extra roasted lemon pav for a legendary late-night treat.",
+    "menu_items": [
+      {
+        "name": "Cheese Butter Pav Bhaji",
+        "price_inr": 220,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Ultra-buttery vegetable mash smothered in shredded cheese and hot buttered pavs.",
+        "recommendation_reason": "Famous for its decadent, unapologetic butter slab.",
+        "source_provenance": "Sardar Refreshments Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_pancham_puriwala",
+    "name": "Pancham Puriwala (VT)",
+    "description": "Serving golden, crispy puris with spicy pumpkin bhaji and slow-simmered chole since the 1840s, predating the construction of the Victoria Terminus across the road.",
+    "category": "Food",
+    "area": "Fort / VT, South Mumbai",
+    "address": "8/10, Perin Nariman St, Ballard Estate, Fort, Mumbai 400001",
+    "estimatedCost": 75,
+    "priceEstimated": false,
+    "durationMinutes": 30,
+    "latitude": 18.9398,
+    "longitude": 72.8362,
+    "tags": [
+      "Puri Bhaji",
+      "Historic",
+      "Budget Meal",
+      "Oldest"
+    ],
+    "facilities": [
+      "Seating"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": false,
+    "isAffordableFood": true,
+    "cuisineType": "North Indian / Chaat",
+    "quietnessLevel": "Lively",
+    "rating": 4.7,
+    "openingHours": "8:30 AM – 11:00 PM",
+    "insiderTip": "Try the Pancham Thali with masala puris (beetroot, spinach, and methi) and chilled shrikhand.",
+    "menu_items": [
+      {
+        "name": "Pancham Special Thali (5 Puris & 4 Sabzis)",
+        "price_inr": 160,
+        "is_price_available": true,
+        "dietary_type": "VEGETARIAN",
+        "description": "Five assorted puris (palak, beetroot, masala, sada) served with aloo bhaji, chole, kaddu, and raita.",
+        "recommendation_reason": "Historic establishment operating near VT since 1848.",
+        "source_provenance": "Pancham Puriwala Menu (Curated 2026)"
+      }
+    ]
+  },
+  {
+    "id": "place_kanheri_caves",
+    "name": "Kanheri Caves (Sanjay Gandhi National Park)",
+    "description": "A mesmerizing complex of over 100 basalt rock-cut Buddhist prayer halls and monk cells dating from the 1st century BCE, nestled deep inside Mumbai's tropical rainforest.",
+    "category": "Historical",
+    "area": "Borivali East, Suburbs",
+    "address": "Sanjay Gandhi National Park, Borivali East, Mumbai 400066",
+    "estimatedCost": 85,
+    "priceEstimated": false,
+    "durationMinutes": 180,
+    "latitude": 19.2064,
+    "longitude": 72.9065,
+    "tags": [
+      "Ancient",
+      "Caves",
+      "Buddhist",
+      "Rainforest",
+      "Trek"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.8,
+    "openingHours": "7:30 AM – 5:00 PM (Closed Mondays)",
+    "insiderTip": "Rent a bicycle at the national park entrance gate to cycle the 6km canopy-covered forest trail up to the cave entrance.",
+    "menu_items": []
+  },
+  {
+    "id": "place_bandra_fort",
+    "name": "Castella de Aguada (Bandra Fort)",
+    "description": "17th-century Portuguese watchtower fort sitting at the tip of Land's End, offering panoramic amphitheatre views of the Arabian Sea and the Bandra-Worli Sea Link.",
+    "category": "Sunset",
+    "area": "Bandra West, Suburbs",
+    "address": "Byramji Jeejeebhoy Road, Bandstand, Bandra West, Mumbai 400050",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 75,
+    "latitude": 19.0435,
+    "longitude": 72.8189,
+    "tags": [
+      "Portuguese Fort",
+      "Sea Link",
+      "Sunset",
+      "Free"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Moderate",
+    "rating": 4.7,
+    "openingHours": "6:00 AM – 7:30 PM",
+    "insiderTip": "The stone steps facing the sea link offer Mumbai's best free vantage point when the bridge lights illuminate at dusk.",
+    "menu_items": []
+  },
+  {
+    "id": "place_nature_park",
+    "name": "Maharashtra Nature Park (Mahim)",
+    "description": "An incredible 37-acre ecological wonder converted from a municipal garbage dumping ground into a lush woodland with 14,000 trees, butterflies, and quiet walking paths.",
+    "category": "Nature",
+    "area": "Dharavi / Mahim, Central Mumbai",
+    "address": "Near Dharavi Bus Depot, Sion Bandra Link Road, Mumbai 400017",
+    "estimatedCost": 20,
+    "priceEstimated": false,
+    "durationMinutes": 90,
+    "latitude": 19.0538,
+    "longitude": 72.8596,
+    "tags": [
+      "Ecology",
+      "Forest",
+      "Birdwatching",
+      "Quiet"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.6,
+    "openingHours": "8:30 AM – 5:00 PM",
+    "insiderTip": "The canopy reading benches near the butterfly garden are secluded and perfect for focused reading away from traffic noise.",
+    "menu_items": []
+  },
+  {
+    "id": "place_bombay_paperie",
+    "name": "The Bombay Paperie (Heritage Paper Studio)",
+    "description": "A rare artisanal haven dedicated to the ancient craft of 100% tree-free handmade cotton paper, operating inside a quaint heritage alley in the Fort financial district.",
+    "category": "Cultural",
+    "area": "Fort, South Mumbai",
+    "address": "59, Bombay Mutual Terrace, Fort, Mumbai 400001",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 45,
+    "latitude": 18.9333,
+    "longitude": 72.8341,
+    "tags": [
+      "Handmade Paper",
+      "Artisan",
+      "Heritage",
+      "Art"
+    ],
+    "facilities": [
+      "AC",
+      "Quiet"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": false,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.5,
+    "openingHours": "10:30 AM – 7:00 PM",
+    "insiderTip": "Watch live demonstrations of cotton rag pulping and pick up handmade leather-bound explorer travel journals.",
+    "menu_items": []
+  },
+  {
+    "id": "place_title_waves",
+    "name": "Title Waves Bookstore & Reading Lounge",
+    "description": "Sprawling 8,000 sq ft boutique independent bookstore in Bandra with dedicated quiet reading pods, charging plugs, and an in-house espresso coffee bar.",
+    "category": "Study",
+    "area": "Bandra West, Suburbs",
+    "address": "St. Paul's Media Complex, 24th Road, Bandra West, Mumbai 400050",
+    "estimatedCost": 150,
+    "priceEstimated": true,
+    "durationMinutes": 120,
+    "latitude": 19.0601,
+    "longitude": 72.8329,
+    "tags": [
+      "Bookstore",
+      "Study",
+      "WiFi",
+      "Quiet"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "Quiet",
+      "AC",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.8,
+    "openingHours": "10:00 AM – 9:00 PM",
+    "insiderTip": "The back acoustic reading booths have personal reading lamps and high-speed Wi-Fi, perfect for study and coding sessions.",
+    "menu_items": []
+  },
+  {
+    "id": "place_dosti_house",
+    "name": "Dosti House (BKC)",
+    "description": "A state-of-the-art public cultural library and knowledge center in Bandra-Kurla Complex with ergonomic study desks, high-speed Wi-Fi, and extensive research databases.",
+    "category": "Study",
+    "area": "BKC, Suburbs",
+    "address": "C-49, G Block, Bandra Kurla Complex, Bandra East, Mumbai 400051",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 180,
+    "latitude": 19.0665,
+    "longitude": 72.8687,
+    "tags": [
+      "Modern Library",
+      "Coworking",
+      "WiFi",
+      "AC"
+    ],
+    "facilities": [
+      "WiFi",
+      "Charging",
+      "Seating",
+      "Quiet",
+      "AC",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": false,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.9,
+    "openingHours": "9:00 AM – 5:00 PM (Closed Sundays)",
+    "insiderTip": "Free access upon presenting government photo ID. Unmatched internet speed and zero background noise.",
+    "menu_items": []
+  },
+  {
+    "id": "place_jai_hind_library",
+    "name": "Mani Bhavan & Gandhi Memorial Study Room",
+    "description": "Historic headquarters of Mahatma Gandhi in Mumbai during 1917–1934, housing a peaceful 20,000-volume research library and quiet terrace.",
+    "category": "Study",
+    "area": "Gamdevi, South Mumbai",
+    "address": "19, Laburnum Road, Gamdevi, Mumbai 400007",
+    "estimatedCost": 0,
+    "priceEstimated": false,
+    "durationMinutes": 90,
+    "latitude": 18.9602,
+    "longitude": 72.8123,
+    "tags": [
+      "Gandhi Memorial",
+      "Quiet Study",
+      "Heritage",
+      "Serene"
+    ],
+    "facilities": [
+      "Seating",
+      "Quiet",
+      "Restroom"
+    ],
+    "verificationStatus": "VERIFIED",
+    "isHiddenGem": true,
+    "isStudyWork": true,
+    "isAffordableFood": false,
+    "cuisineType": "",
+    "quietnessLevel": "Silent",
+    "rating": 4.8,
+    "openingHours": "9:30 AM – 6:00 PM",
+    "insiderTip": "Tucked inside the shaded leafy avenue of Laburnum Road; sit on the first floor study library for deep focus.",
+    "menu_items": []
+  }
+]

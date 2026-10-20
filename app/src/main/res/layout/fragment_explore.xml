@@ -7,65 +7,56 @@
     android:background="@color/warm_ivory_surface"
     android:orientation="vertical">
 
-    <!-- Top App Bar / Title -->
+    <!-- Top App Bar / Search Header (Compact) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/forest_green_primary"
         android:orientation="vertical"
         android:paddingStart="16dp"
-        android:paddingTop="20dp"
+        android:paddingTop="14dp"
         android:paddingEnd="16dp"
-        android:paddingBottom="16dp">
+        android:paddingBottom="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Explore Sheher • मुंबई खोजें"
-                    android:textColor="@color/warm_ivory_background"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Filter by vibe, budget, neighbourhood &amp; quietness"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                android:layout_centerVertical="true"
+                android:text="Explore Mumbai • शहर खोजें"
+                android:textColor="@color/warm_ivory_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <!-- Surprise Me Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSurpriseMe"
                 style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
+                android:layout_height="32dp"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:backgroundTint="@color/gold_primary"
-                android:text="🎲 Surprise Me!"
+                android:paddingStart="10dp"
+                android:paddingTop="0dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="0dp"
+                android:text="🎲 Surprise"
                 android:textColor="@color/forest_green_dark"
                 android:textSize="11sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Search Box -->
+        <!-- Search Box (Prominent & Compact) -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="12dp"
-            app:cardCornerRadius="24dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="21dp"
             app:cardElevation="2dp"
             app:strokeColor="@android:color/transparent">
 
@@ -74,12 +65,12 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp">
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
                     android:src="@drawable/ic_search"
                     app:tint="@color/text_secondary" />
 
@@ -87,7 +78,7 @@
                     android:id="@+id/etSearch"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="Search fort, cafe, library, sunset, chai..."
@@ -96,116 +87,28 @@
                     android:maxLines="1"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_hint"
-                    android:textSize="14sp" />
+                    android:textSize="13sp" />
 
                 <ImageButton
                     android:id="@+id/btnClearSearch"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:src="@drawable/ic_delete"
                     android:visibility="gone"
                     app:tint="@color/text_hint" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
-
-        <!-- Quick Search Tags -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tagQuickWifi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:background="@drawable/bg_badge_rounded"
-                    android:backgroundTint="@color/forest_green_dark"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="📶 High-Speed WiFi"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:id="@+id/tagQuickFree"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:background="@drawable/bg_badge_rounded"
-                    android:backgroundTint="@color/forest_green_dark"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="🆓 Free Entry"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:id="@+id/tagQuickSunset"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:background="@drawable/bg_badge_rounded"
-                    android:backgroundTint="@color/forest_green_dark"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="🌅 Sunset Spot"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:id="@+id/tagQuickChai"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="6dp"
-                    android:background="@drawable/bg_badge_rounded"
-                    android:backgroundTint="@color/forest_green_dark"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="☕ Irani Chai"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="11sp" />
-
-                <TextView
-                    android:id="@+id/tagQuickQuiet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_badge_rounded"
-                    android:backgroundTint="@color/forest_green_dark"
-                    android:paddingStart="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="4dp"
-                    android:text="🤫 Quiet Zone"
-                    android:textColor="@color/teal_pale"
-                    android:textSize="11sp" />
-            </LinearLayout>
-        </HorizontalScrollView>
     </LinearLayout>
 
-    <!-- Category Filters Scroll -->
+    <!-- Category Filters Scroll (Horizontally Scrollable Chips) -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:clipToPadding="false"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
         android:scrollbars="none">
 
         <com.google.android.material.chip.ChipGroup
@@ -227,7 +130,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🏛️ Cultural &amp; Deco" />
+                android:text="🏛️ Cultural" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipCatHistorical"
@@ -259,101 +162,147 @@
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
-    <!-- Neighborhood / Area Filters Scroll -->
-    <HorizontalScrollView
+    <!-- Modern Shopping/Discovery Filter & Sort Control Strip -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="2dp"
-        android:clipToPadding="false"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:scrollbars="none">
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroupArea"
+        <!-- Filter Action Button (Amazon / Flipkart style) -->
+        <LinearLayout
+            android:id="@+id/btnOpenFilterSheet"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:singleSelection="true">
+            android:layout_height="32dp"
+            android:background="@drawable/bg_badge_rounded"
+            android:backgroundTint="@color/warm_ivory_surface"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAreaAll"
-                style="@style/Widget.Material3.Chip.Filter"
+            <ImageView
+                android:id="@+id/ivFilterIcon"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_filter"
+                app:tint="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/tvFilterLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="All Mumbai" />
+                android:layout_marginStart="5dp"
+                android:text="Filters"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAreaSouth"
-                style="@style/Widget.Material3.Chip.Filter"
+            <TextView
+                android:id="@+id/tvFilterBadge"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/gold_primary"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/forest_green_dark"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/warm_ivory_divider" />
+
+        <!-- Sort Action Button -->
+        <LinearLayout
+            android:id="@+id/btnOpenSortDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_badge_rounded"
+            android:backgroundTint="@color/warm_ivory_surface"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:src="@drawable/ic_sort"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:id="@+id/tvSortToggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Colaba &amp; South" />
+                android:layout_marginStart="4dp"
+                android:text="Curated ▾"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAreaFort"
-                style="@style/Widget.Material3.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fort &amp; Kala Ghoda" />
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAreaBandra"
-                style="@style/Widget.Material3.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bandra &amp; West" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAreaDadar"
-                style="@style/Widget.Material3.Chip.Filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dadar &amp; Matunga" />
-        </com.google.android.material.chip.ChipGroup>
-    </HorizontalScrollView>
-
-    <!-- Results count & Sort Bar -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="6dp">
-
+        <!-- Results count -->
         <TextView
             android:id="@+id/tvResultsCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
             android:textColor="@color/text_secondary"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            tools:text="Showing 16 Mumbai discoveries" />
+            android:textSize="11sp"
+            tools:text="16 places" />
 
+        <!-- Clear All Filters Link -->
         <TextView
-            android:id="@+id/tvSortToggle"
+            android:id="@+id/btnClearAllFilters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
             android:background="?attr/selectableItemBackground"
-            android:padding="4dp"
-            android:text="Sort: Curated ▾"
+            android:padding="2dp"
+            android:text="Clear"
             android:textColor="@color/forest_green_primary"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
 
-    <!-- Places RecyclerView -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/warm_ivory_divider" />
+
+    <!-- Places RecyclerView (Starts high up on screen) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExplorePlaces"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:paddingTop="8dp"
         android:paddingBottom="16dp"
         tools:listitem="@layout/item_place" />
 
@@ -369,8 +318,8 @@
         android:visibility="gone">
 
         <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:src="@drawable/ic_search"
             app:tint="@color/text_hint" />
 
@@ -378,9 +327,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="No places match your search"
+            android:text="No places match your filters"
             android:textColor="@color/text_primary"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
@@ -388,18 +337,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="Try resetting filters or searching for 'Fort', 'Chai', 'WiFi', or 'Sunset'"
+            android:text="Try resetting filters or searching for different keywords"
             android:textColor="@color/text_secondary"
-            android:textSize="13sp" />
+            android:textSize="12sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnResetFilters"
             style="@style/ShehersePrimaryButton"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="14dp"
             android:text="Reset All Filters"
-            android:textSize="13sp" />
+            android:textSize="12sp" />
     </LinearLayout>
 
 </LinearLayout>

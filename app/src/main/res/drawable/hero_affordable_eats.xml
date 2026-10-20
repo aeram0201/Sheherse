@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm amber gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FEF3C7"
+                android:centerColor="#D97706"
+                android:endColor="#92400E"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Counter/table surface -->
+    <item android:top="130dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#92400E" />
+        </shape>
+    </item>
+    <!-- Chai glass (cutting chai) -->
+    <item
+        android:left="70dp"
+        android:right="230dp"
+        android:top="60dp"
+        android:bottom="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAF8F2" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Tea liquid in glass -->
+    <item
+        android:left="73dp"
+        android:right="233dp"
+        android:top="75dp"
+        android:bottom="55dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D97706" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <!-- Steam line 1 -->
+    <item
+        android:left="85dp"
+        android:right="255dp"
+        android:top="40dp"
+        android:bottom="155dp">
+        <shape android:shape="oval">
+            <solid android:color="#30FAF8F2" />
+        </shape>
+    </item>
+    <!-- Steam line 2 -->
+    <item
+        android:left="95dp"
+        android:right="245dp"
+        android:top="30dp"
+        android:bottom="160dp">
+        <shape android:shape="oval">
+            <solid android:color="#20FAF8F2" />
+        </shape>
+    </item>
+    <!-- Bun Maska plate -->
+    <item
+        android:left="170dp"
+        android:right="80dp"
+        android:top="100dp"
+        android:bottom="65dp">
+        <shape android:shape="oval">
+            <solid android:color="#FAF8F2" />
+        </shape>
+    </item>
+    <!-- Bun on plate -->
+    <item
+        android:left="185dp"
+        android:right="105dp"
+        android:top="90dp"
+        android:bottom="80dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Butter pat -->
+    <item
+        android:left="200dp"
+        android:right="130dp"
+        android:top="95dp"
+        android:bottom="90dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FEF3C7" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <!-- Samosa shape (triangle approximation) -->
+    <item
+        android:left="250dp"
+        android:right="60dp"
+        android:top="85dp"
+        android:bottom="75dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37" />
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="4dp"
+                android:bottomLeftRadius="4dp"
+                android:bottomRightRadius="4dp" />
+        </shape>
+    </item>
+</layer-list>

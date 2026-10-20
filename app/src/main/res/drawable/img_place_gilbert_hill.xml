@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sunset suburban Mumbai twilight sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#312E81"
+                android:centerColor="#7C3AED"
+                android:endColor="#D97706"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Sheer 200-foot vertical black basalt rock monolith created 66 million years ago -->
+    <item android:left="90dp" android:right="90dp" android:top="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0F172A" />
+            <corners android:topLeftRadius="12dp" android:topRightRadius="12dp" />
+        </shape>
+    </item>
+    <!-- Columnar vertical basalt geological joint fissures -->
+    <item android:left="115dp" android:right="235dp" android:top="50dp">
+        <shape android:shape="rectangle"><solid android:color="#1E293B" /></shape>
+    </item>
+    <item android:left="145dp" android:right="205dp" android:top="45dp">
+        <shape android:shape="rectangle"><solid android:color="#334155" /></shape>
+    </item>
+    <item android:left="175dp" android:right="175dp" android:top="48dp">
+        <shape android:shape="rectangle"><solid android:color="#1E293B" /></shape>
+    </item>
+    <item android:left="205dp" android:right="145dp" android:top="52dp">
+        <shape android:shape="rectangle"><solid android:color="#334155" /></shape>
+    </item>
+    <item android:left="235dp" android:right="115dp" android:top="46dp">
+        <shape android:shape="rectangle"><solid android:color="#1E293B" /></shape>
+    </item>
+    <!-- Gaondevi Temple atop the monolith summit -->
+    <item android:left="160dp" android:right="160dp" android:top="22dp" android:bottom="190dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37" />
+            <corners android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+        </shape>
+    </item>
+    <!-- Temple flag flutter atop -->
+    <item android:left="175dp" android:right="165dp" android:top="12dp" android:bottom="215dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#EA580C" />
+        </shape>
+    </item>
+    <!-- Suburban Andheri skyline base at foot of hill -->
+    <item android:top="195dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#020617" />
+        </shape>
+    </item>
+</layer-list>

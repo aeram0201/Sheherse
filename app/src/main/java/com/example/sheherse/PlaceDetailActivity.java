@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import com.example.sheherse.model.Enquiry;
 import com.example.sheherse.model.Itinerary;
 import com.example.sheherse.model.ItineraryStop;
 import com.example.sheherse.model.Place;
+import com.example.sheherse.util.PlaceImages;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -37,6 +39,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
     private Place place;
 
     private MaterialToolbar toolbarDetail;
+    private ImageView ivDetailHero;
     private TextView tvDetailEmoji;
     private TextView tvDetailCategory;
     private FloatingActionButton fabSavePlace;
@@ -89,6 +92,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
     private void initViews() {
         toolbarDetail = findViewById(R.id.toolbarDetail);
+        ivDetailHero = findViewById(R.id.ivDetailHero);
         tvDetailEmoji = findViewById(R.id.tvDetailEmoji);
         tvDetailCategory = findViewById(R.id.tvDetailCategory);
         fabSavePlace = findViewById(R.id.fabSavePlace);
@@ -117,6 +121,10 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
     private void bindPlaceData() {
         toolbarDetail.setTitle(place.getName());
+
+        if (ivDetailHero != null) {
+            ivDetailHero.setImageResource(PlaceImages.getPlaceImageRes(place));
+        }
 
         tvDetailTitle.setText(place.getName());
         tvDetailArea.setText("📍 " + place.getArea());

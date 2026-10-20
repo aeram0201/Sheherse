@@ -1,119 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginBottom="10dp"
-    style="@style/SheherseCard">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <!-- Stop Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardStopItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="4dp"
+        style="@style/SheherseCard">
 
-        <!-- Stop Number Badge -->
-        <TextView
-            android:id="@+id/tvStopNumber"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:background="@color/forest_green_pale"
-            android:gravity="center"
-            android:textColor="@color/forest_green_primary"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            tools:text="1" />
-
-        <!-- Info Column -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="12dp">
 
-            <TextView
-                android:id="@+id/tvStopName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_primary"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:text="Subko Specialty Coffee Roasters" />
-
-            <TextView
-                android:id="@+id/tvStopArea"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
-                tools:text="Ranwar Village, Bandra West" />
-
+            <!-- Top Row: Stop Badge, Time Window & Control Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
+                <!-- Stop Number Badge -->
                 <TextView
-                    android:id="@+id/tvStopDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/teal_secondary"
-                    android:textSize="12sp"
-                    tools:text="⏱ 90 mins" />
+                    android:id="@+id/tvStopNumber"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/forest_green_pale"
+                    android:gravity="center"
+                    android:textColor="@color/forest_green_primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:text="1" />
 
+                <!-- Planned Time Window -->
                 <TextView
-                    android:id="@+id/tvStopCost"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvStopTimeWindow"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:layout_weight="1"
                     android:textColor="@color/forest_green_primary"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    tools:text="₹0 (Free)" />
+                    tools:text="09:30 AM – 10:45 AM" />
+
+                <!-- Directions to Stop -->
+                <ImageButton
+                    android:id="@+id/btnStopDirections"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_directions"
+                    android:contentDescription="Directions in Google Maps"
+                    app:tint="@color/forest_green_primary" />
+
+                <!-- Reorder Controls -->
+                <ImageButton
+                    android:id="@+id/btnMoveUp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="2dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_up"
+                    android:contentDescription="Move up"
+                    app:tint="@color/text_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnMoveDown"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_down"
+                    android:contentDescription="Move down"
+                    app:tint="@color/text_secondary" />
+
+                <ImageButton
+                    android:id="@+id/btnReplaceStop"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="2dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_refresh"
+                    android:contentDescription="Replace stop"
+                    app:tint="@color/teal_secondary" />
+
+                <!-- Remove Stop -->
+                <ImageButton
+                    android:id="@+id/btnDeleteStop"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="2dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_delete"
+                    android:contentDescription="@string/delete"
+                    app:tint="@color/status_rejected_text" />
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Reorder and Delete Controls -->
+            <!-- Middle Row: Thumbnail Photo + Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivStopPhoto"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+                    tools:src="@drawable/photo_marine_drive" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStopName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        tools:text="Kitab Khana Teakwood Bookstore" />
+
+                    <TextView
+                        android:id="@+id/tvStopArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        tools:text="📍 Fort, South Mumbai" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvStopDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/teal_secondary"
+                            android:textSize="11sp"
+                            tools:text="⏱ 75 mins" />
+
+                        <TextView
+                            android:id="@+id/tvStopCost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/forest_green_primary"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            tools:text="₹0 (Free)" />
+
+                        <TextView
+                            android:id="@+id/tvStopOpeningBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_badge_rounded"
+                            android:backgroundTint="@color/status_verified_bg"
+                            android:paddingStart="6dp"
+                            android:paddingTop="1dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="1dp"
+                            android:textColor="@color/status_verified_text"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            tools:text="Open Today" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Recommendation Rationale / Match Reason -->
+            <TextView
+                android:id="@+id/tvStopRationale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/warm_ivory_surface"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                tools:text="💡 Matches category Historical • Nearby (0.8 km)" />
+
+            <!-- Cafe & Restaurant Curated Menu Recommendations Section -->
+            <LinearLayout
+                android:id="@+id/layoutMenuSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/gold_light"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvMenuSectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍽️ Curated Menu Recommendations"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutMenuItemsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tvMenuUnavailableNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Menu and exact prices not published for this eatery. Curated suggestion: Try local cutting chai or street snacks in the area."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Point-to-Point Transport Leg to next stop -->
+    <LinearLayout
+        android:id="@+id/layoutTravelLeg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal">
+
+        <!-- Left vertical line connector -->
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="14dp"
+            android:background="@color/teal_secondary" />
+
+        <!-- Transport Info Card -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_badge_rounded"
+            android:backgroundTint="@color/teal_pale"
             android:orientation="vertical"
-            android:gravity="center">
+            android:paddingStart="10dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="6dp">
 
-            <ImageButton
-                android:id="@+id/btnMoveUp"
-                android:layout_width="30dp"
-                android:layout_height="26dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_arrow_up"
-                android:contentDescription="Move up"
-                app:tint="@color/text_secondary" />
+            <!-- Badges Row: Mode & Fare -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btnMoveDown"
-                android:layout_width="30dp"
-                android:layout_height="26dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_arrow_down"
-                android:contentDescription="Move down"
-                app:tint="@color/text_secondary" />
+                <TextView
+                    android:id="@+id/tvLegModeBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/teal_secondary"
+                    android:paddingStart="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:text="🚆 LOCAL TRAIN" />
+
+                <TextView
+                    android:id="@+id/tvLegFareBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/gold_light"
+                    android:paddingStart="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="6dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    tools:text="₹10 (Suburban Rail)" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/btnLegDirections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Directions ↗"
+                    android:textColor="@color/teal_secondary"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Transport summary text -->
+            <TextView
+                android:id="@+id/tvTravelLegInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/text_primary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Western Line Local: Churchgate → Bandra (9 stops · ~18 mins)" />
+
+            <!-- Step by step transit instructions -->
+            <TextView
+                android:id="@+id/tvTravelLegSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:lineSpacingExtra="1dp"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                tools:text="1. Walk 400m to Churchgate Stn\n2. Board Slow Local to Bandra\n3. Walk 600m to destination" />
         </LinearLayout>
-
-        <!-- Remove Stop -->
-        <ImageButton
-            android:id="@+id/btnDeleteStop"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="4dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_delete"
-            android:contentDescription="@string/delete"
-            app:tint="@color/status_rejected_text" />
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

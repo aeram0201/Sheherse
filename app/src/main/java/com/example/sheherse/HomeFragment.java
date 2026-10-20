@@ -46,19 +46,29 @@ public class HomeFragment extends Fragment {
     private TextView tvRoleActionSubtitle;
     private MaterialButton btnOpenRoleDashboard;
 
+    // Six module cards
+    private MaterialCardView cardExploreModule;
+    private MaterialCardView cardFirstTime;
     private MaterialCardView cardHiddenGems;
     private MaterialCardView cardStudyWork;
     private MaterialCardView cardAffordableFood;
     private MaterialCardView cardEvents;
     private MaterialCardView cardCommunity;
 
+    // AI Planner banner
+    private MaterialCardView cardAiPlanner;
+
+    // Trail cards
     private MaterialCardView cardTrailStudent;
     private MaterialCardView cardTrailDeco;
     private MaterialCardView cardTrailBandra;
+
+    // Slang card
     private MaterialCardView cardBambaiyaHack;
     private TextView tvSlangWord;
     private TextView tvSlangMeaning;
 
+    // Navigation helpers (now invisible but kept for safety)
     private TextView tvExploreAllMoods;
     private TextView tvOpenPlanner;
     private TextView tvViewAllPlaces;
@@ -92,7 +102,8 @@ public class HomeFragment extends Fragment {
 
         initViews(view);
         setupRoleBanner();
-        setupMoodCards();
+        setupModuleCards();
+        setupAiPlanner();
         setupTrailCards();
         setupSlangCard();
         setupFilters();
@@ -111,11 +122,15 @@ public class HomeFragment extends Fragment {
         tvRoleActionSubtitle = view.findViewById(R.id.tvRoleActionSubtitle);
         btnOpenRoleDashboard = view.findViewById(R.id.btnOpenRoleDashboard);
 
+        cardExploreModule = view.findViewById(R.id.cardExploreModule);
+        cardFirstTime = view.findViewById(R.id.cardFirstTime);
         cardHiddenGems = view.findViewById(R.id.cardHiddenGems);
         cardStudyWork = view.findViewById(R.id.cardStudyWork);
         cardAffordableFood = view.findViewById(R.id.cardAffordableFood);
         cardEvents = view.findViewById(R.id.cardEvents);
         cardCommunity = view.findViewById(R.id.cardCommunity);
+
+        cardAiPlanner = view.findViewById(R.id.cardAiPlanner);
 
         cardTrailStudent = view.findViewById(R.id.cardTrailStudent);
         cardTrailDeco = view.findViewById(R.id.cardTrailDeco);
@@ -131,7 +146,7 @@ public class HomeFragment extends Fragment {
         chipGroupHomeFilter = view.findViewById(R.id.chipGroupHomeFilter);
         rvFeaturedPlaces = view.findViewById(R.id.rvFeaturedPlaces);
 
-        tvLiveMumbaiTicker.setSelected(true); // Enable marquee scrolling
+        if (tvLiveMumbaiTicker != null) tvLiveMumbaiTicker.setSelected(true);
     }
 
     private void setupRoleBanner() {
@@ -158,25 +173,52 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    private void setupMoodCards() {
-        cardHiddenGems.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_HIDDEN_GEMS));
-        cardStudyWork.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_STUDY_WORK));
-        cardAffordableFood.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_AFFORDABLE_FOOD));
+    private void setupModuleCards() {
+        if (cardExploreModule != null)
+            cardExploreModule.setOnClickListener(v -> {
+                if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_explore);
+            });
 
-        cardEvents.setOnClickListener(v -> startActivity(new Intent(requireContext(), EventsActivity.class)));
-        cardCommunity.setOnClickListener(v -> startActivity(new Intent(requireContext(), CommunityActivity.class)));
+        if (cardFirstTime != null)
+            cardFirstTime.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_FIRST_TIME));
 
-        tvExploreAllMoods.setOnClickListener(v -> {
-            if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_explore);
-        });
+        if (cardHiddenGems != null)
+            cardHiddenGems.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_HIDDEN_GEMS));
 
-        tvOpenPlanner.setOnClickListener(v -> {
-            if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_planner);
-        });
+        if (cardStudyWork != null)
+            cardStudyWork.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_STUDY_WORK));
 
-        tvViewAllPlaces.setOnClickListener(v -> {
-            if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_explore);
-        });
+        if (cardAffordableFood != null)
+            cardAffordableFood.setOnClickListener(v -> openCategory(CategoryListActivity.TYPE_AFFORDABLE_FOOD));
+
+        if (cardEvents != null)
+            cardEvents.setOnClickListener(v -> startActivity(new Intent(requireContext(), EventsActivity.class)));
+
+        if (cardCommunity != null)
+            cardCommunity.setOnClickListener(v -> startActivity(new Intent(requireContext(), CommunityActivity.class)));
+
+        if (tvExploreAllMoods != null)
+            tvExploreAllMoods.setOnClickListener(v -> {
+                if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_explore);
+            });
+
+        if (tvOpenPlanner != null)
+            tvOpenPlanner.setOnClickListener(v -> {
+                if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_planner);
+            });
+
+        if (tvViewAllPlaces != null)
+            tvViewAllPlaces.setOnClickListener(v -> {
+                if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_explore);
+            });
+    }
+
+    private void setupAiPlanner() {
+        if (cardAiPlanner != null) {
+            cardAiPlanner.setOnClickListener(v -> {
+                startActivity(new Intent(requireContext(), PlannerWizardActivity.class));
+            });
+        }
     }
 
     private void openCategory(String categoryType) {
@@ -186,23 +228,26 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupTrailCards() {
-        cardTrailStudent.setOnClickListener(v -> loadTrailPreset(
-                "Student SoBo Day Out",
-                250,
-                new String[]{"place_kyani", "place_asiatic_steps", "place_kitab_khana", "place_marine_drive"}
-        ));
+        if (cardTrailStudent != null)
+            cardTrailStudent.setOnClickListener(v -> loadTrailPreset(
+                    "Student SoBo Day Out",
+                    250,
+                    new String[]{"place_kyani", "place_asiatic_steps", "place_kitab_khana", "place_marine_drive"}
+            ));
 
-        cardTrailDeco.setOnClickListener(v -> loadTrailPreset(
-                "Fort Art Deco & UNESCO Trail",
-                150,
-                new String[]{"place_horniman_circle", "place_central_library", "place_britannia", "place_sassoon_docks"}
-        ));
+        if (cardTrailDeco != null)
+            cardTrailDeco.setOnClickListener(v -> loadTrailPreset(
+                    "Fort Art Deco & UNESCO Trail",
+                    150,
+                    new String[]{"place_horniman_circle", "place_central_library", "place_britannia", "place_sassoon_docks"}
+            ));
 
-        cardTrailBandra.setOnClickListener(v -> loadTrailPreset(
-                "Bandra Bohemian & Sunset Trail",
-                300,
-                new String[]{"place_candies_bandra", "place_drip_cafe", "place_bandra_fort"}
-        ));
+        if (cardTrailBandra != null)
+            cardTrailBandra.setOnClickListener(v -> loadTrailPreset(
+                    "Bandra Bohemian & Sunset Trail",
+                    300,
+                    new String[]{"place_candies_bandra", "place_drip_cafe", "place_bandra_fort"}
+            ));
     }
 
     private void loadTrailPreset(String title, int budget, String[] placeIds) {
@@ -217,27 +262,27 @@ public class HomeFragment extends Fragment {
         }
         placeRepository.saveItinerary(itin);
         Toast.makeText(requireContext(), "Loaded '" + title + "' into Planner!", Toast.LENGTH_SHORT).show();
-
-        if (navigationListener != null) {
-            navigationListener.navigateToTab(R.id.nav_planner);
-        }
+        if (navigationListener != null) navigationListener.navigateToTab(R.id.nav_planner);
     }
 
     private void setupSlangCard() {
-        cardBambaiyaHack.setOnClickListener(v -> {
-            new AlertDialog.Builder(requireContext())
-                    .setTitle("📖 Mumbai Street Slang Guide")
-                    .setMessage("• 'Kadak Single' — Strong cutting chai with extra boiled milk and cardamom.\n\n"
-                            + "• 'Brun Maska' — Crispy hard-crust bread slit open and stuffed with cold salted butter.\n\n"
-                            + "• 'Chinchpokli / VT side' — Way to indicate South Bombay direction on local trains.\n\n"
-                            + "• 'Bindaas' — Worry-free Mumbai attitude.\n\n"
-                            + "• 'Khau Galli' — Food street loaded with street eats like Dosa, Frankie & Chaat.")
-                    .setPositiveButton("Bindaas!", null)
-                    .show();
-        });
+        if (cardBambaiyaHack != null) {
+            cardBambaiyaHack.setOnClickListener(v ->
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle("📖 Mumbai Street Slang Guide")
+                            .setMessage("• 'Kadak Single' — Strong cutting chai with extra boiled milk and cardamom.\n\n"
+                                    + "• 'Brun Maska' — Crispy hard-crust bread slit open and stuffed with cold salted butter.\n\n"
+                                    + "• 'Chinchpokli / VT side' — Way to indicate South Bombay direction on local trains.\n\n"
+                                    + "• 'Bindaas' — Worry-free Mumbai attitude.\n\n"
+                                    + "• 'Khau Galli' — Food street loaded with street eats like Dosa, Frankie & Chaat.")
+                            .setPositiveButton("Bindaas!", null)
+                            .show()
+            );
+        }
     }
 
     private void setupFilters() {
+        if (chipGroupHomeFilter == null) return;
         chipGroupHomeFilter.setOnCheckedStateChangeListener((group, checkedIds) -> {
             if (checkedIds.contains(R.id.chipHomeBudget)) {
                 loadFeaturedPlaces("BUDGET");
@@ -252,6 +297,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setupRecyclerView() {
+        if (rvFeaturedPlaces == null) return;
         rvFeaturedPlaces.setLayoutManager(new LinearLayoutManager(requireContext()));
         placeAdapter = new PlaceAdapter(requireContext(), featuredList, place -> {
             Intent intent = new Intent(requireContext(), PlaceDetailActivity.class);
@@ -262,35 +308,37 @@ public class HomeFragment extends Fragment {
     }
 
     private void loadFeaturedPlaces(String filter) {
-        List<Place> all = placeRepository.getAllPlaces();
         featuredList.clear();
+        List<Place> all = placeRepository.getAllPlaces();
 
-        for (Place p : all) {
-            if ("BUDGET".equals(filter)) {
-                if (p.getEstimatedCost() <= 100) featuredList.add(p);
-            } else if ("STUDY".equals(filter)) {
-                if (p.isStudyWork() || (p.getFacilities() != null && p.getFacilities().contains("WiFi"))) {
-                    featuredList.add(p);
+        switch (filter) {
+            case "BUDGET":
+                for (Place p : all) {
+                    if (p.getEstimatedCost() >= 0 && p.getEstimatedCost() <= 100) {
+                        featuredList.add(p);
+                    }
                 }
-            } else if ("SUNSET".equals(filter)) {
-                if ("Sunset".equalsIgnoreCase(p.getCategory()) || "Nature".equalsIgnoreCase(p.getCategory())) {
-                    featuredList.add(p);
+                break;
+            case "STUDY":
+                for (Place p : all) {
+                    if (p.isStudyWork() || "Study".equalsIgnoreCase(p.getCategory())) {
+                        featuredList.add(p);
+                    }
                 }
-            } else {
-                featuredList.add(p);
-            }
+                break;
+            case "SUNSET":
+                for (Place p : all) {
+                    if ("Sunset".equalsIgnoreCase(p.getCategory())
+                            || (p.getTags() != null && (p.getTags().contains("Sunset") || p.getTags().contains("Sea Promenade")))) {
+                        featuredList.add(p);
+                    }
+                }
+                break;
+            default:
+                featuredList.addAll(all);
+                break;
         }
 
-        tvViewAllPlaces.setText("View All (" + all.size() + ") →");
-        placeAdapter.updatePlaces(featuredList);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        setupRoleBanner();
-        if (placeAdapter != null) {
-            placeAdapter.notifyDataSetChanged();
-        }
+        if (placeAdapter != null) placeAdapter.updatePlaces(featuredList);
     }
 }

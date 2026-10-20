@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Eastern seafront morning haze and rose/purple dawn sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#EDE9FE"
+                android:centerColor="#FCE7F3"
+                android:endColor="#93C5FD"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Industrial Sewri dock cranes in the misty distance -->
+    <item android:left="30dp" android:right="310dp" android:top="40dp" android:bottom="140dp"><shape android:shape="rectangle"><solid android:color="#501E3A8A" /></shape></item>
+    <item android:left="70dp" android:right="270dp" android:top="50dp" android:bottom="140dp"><shape android:shape="rectangle"><solid android:color="#501E3A8A" /></shape></item>
+    <item android:left="250dp" android:right="80dp" android:top="30dp" android:bottom="140dp"><shape android:shape="rectangle"><solid android:color="#501E3A8A" /></shape></item>
+    <!-- Low tide tidal mudflats and mangrove salt marshes -->
+    <item android:top="115dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#64748B"
+                android:centerColor="#475569"
+                android:endColor="#1E293B"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Shallow water reflections in mudflat pools -->
+    <item android:left="20dp" android:right="20dp" android:top="145dp" android:bottom="65dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#30FCE7F3" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Flock of vibrant pink Lesser Flamingos feeding -->
+    <!-- Flamingo 1 -->
+    <item android:left="70dp" android:right="270dp" android:top="110dp" android:bottom="90dp"><shape android:shape="oval"><solid android:color="#F43F5E" /></shape></item>
+    <item android:left="85dp" android:right="265dp" android:top="95dp" android:bottom="120dp"><shape android:shape="rectangle"><solid android:color="#FB7185" /></shape></item>
+    <!-- Flamingo 2 -->
+    <item android:left="110dp" android:right="230dp" android:top="115dp" android:bottom="85dp"><shape android:shape="oval"><solid android:color="#FB7185" /></shape></item>
+    <item android:left="125dp" android:right="225dp" android:top="100dp" android:bottom="115dp"><shape android:shape="rectangle"><solid android:color="#FDA4AF" /></shape></item>
+    <!-- Flamingo 3 -->
+    <item android:left="150dp" android:right="190dp" android:top="112dp" android:bottom="88dp"><shape android:shape="oval"><solid android:color="#F43F5E" /></shape></item>
+    <item android:left="165dp" android:right="185dp" android:top="98dp" android:bottom="118dp"><shape android:shape="rectangle"><solid android:color="#FB7185" /></shape></item>
+    <!-- Flamingo 4 -->
+    <item android:left="195dp" android:right="145dp" android:top="118dp" android:bottom="82dp"><shape android:shape="oval"><solid android:color="#FB7185" /></shape></item>
+    <!-- Flamingo 5 -->
+    <item android:left="235dp" android:right="105dp" android:top="114dp" android:bottom="86dp"><shape android:shape="oval"><solid android:color="#F43F5E" /></shape></item>
+</layer-list>

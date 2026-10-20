@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Minimalist dark wood & slate cafe interior -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#292524"
+                android:centerColor="#1C1917"
+                android:endColor="#0C0A09"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Warm amber pendant light glow -->
+    <item android:left="80dp" android:right="80dp" android:top="0dp" android:bottom="90dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#60F59E0B"
+                android:endColor="#00000000"
+                android:gradientRadius="140dp"
+                android:type="radial" />
+        </shape>
+    </item>
+    <!-- Wooden study table surface -->
+    <item android:top="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#44403C" />
+        </shape>
+    </item>
+    <!-- Glass carafe base -->
+    <item android:left="110dp" android:right="110dp" android:top="80dp" android:bottom="20dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#30FFFFFF" />
+            <stroke android:color="#60E7E5E4" android:width="2dp" />
+        </shape>
+    </item>
+    <!-- Rich dark pour-over coffee in carafe -->
+    <item android:left="116dp" android:right="116dp" android:top="110dp" android:bottom="26dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <solid android:color="#78350F" />
+        </shape>
+    </item>
+    <!-- V60 Dripper cone on top -->
+    <item android:left="120dp" android:right="120dp" android:top="50dp" android:bottom="100dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <solid android:color="#D6D3D1" />
+        </shape>
+    </item>
+    <!-- Dripper rim -->
+    <item android:left="105dp" android:right="105dp" android:top="45dp" android:bottom="130dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="#E7E5E4" />
+        </shape>
+    </item>
+</layer-list>

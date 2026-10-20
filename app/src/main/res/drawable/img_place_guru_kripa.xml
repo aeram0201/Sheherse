@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm amber street food ambiance -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#B45309"
+                android:centerColor="#78350F"
+                android:endColor="#451A03"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Ceramic bowl base -->
+    <item android:left="35dp" android:right="35dp" android:top="40dp" android:bottom="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#F8FAFC" />
+        </shape>
+    </item>
+    <!-- Rich spiced slow-cooked chickpea chole curry -->
+    <item android:left="50dp" android:right="50dp" android:top="52dp" android:bottom="32dp">
+        <shape android:shape="oval">
+            <solid android:color="#92400E" />
+        </shape>
+    </item>
+    <!-- Crispy golden samosa crust centered -->
+    <item android:left="110dp" android:right="110dp" android:top="65dp" android:bottom="75dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F59E0B" />
+            <corners android:radius="14dp" />
+            <stroke android:color="#D97706" android:width="3dp" />
+        </shape>
+    </item>
+    <!-- Sweet tamarind chutney swirl -->
+    <item android:left="75dp" android:right="150dp" android:top="90dp" android:bottom="60dp">
+        <shape android:shape="oval">
+            <solid android:color="#78350F" />
+        </shape>
+    </item>
+    <!-- Fresh spicy mint-coriander chutney dollop -->
+    <item android:left="160dp" android:right="95dp" android:top="85dp" android:bottom="65dp">
+        <shape android:shape="oval">
+            <solid android:color="#16A34A" />
+        </shape>
+    </item>
+    <!-- Chopped red onion and sev sprinkle -->
+    <item android:left="130dp" android:right="130dp" android:top="60dp" android:bottom="110dp">
+        <shape android:shape="oval">
+            <solid android:color="#F43F5E" />
+        </shape>
+    </item>
+</layer-list>

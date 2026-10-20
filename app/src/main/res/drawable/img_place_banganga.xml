@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Deep historic cistern dusk gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#081C15"
+                android:centerColor="#1B4332"
+                android:endColor="#2C6E63"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Silhara Dynasty Temple Shikhara spires in background -->
+    <item android:left="50dp" android:right="270dp" android:top="20dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+            <corners android:topLeftRadius="20dp" android:topRightRadius="20dp" />
+        </shape>
+    </item>
+    <item android:left="60dp" android:right="280dp" android:top="8dp" android:bottom="170dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <item android:left="250dp" android:right="70dp" android:top="30dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+            <corners android:topLeftRadius="15dp" android:topRightRadius="15dp" />
+        </shape>
+    </item>
+    <item android:left="260dp" android:right="80dp" android:top="16dp" android:bottom="165dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Concentric stone steps (Ghats) leading down into freshwater tank -->
+    <item android:left="20dp" android:right="20dp" android:top="90dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2D6A4F" />
+        </shape>
+    </item>
+    <item android:left="45dp" android:right="45dp" android:top="110dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+        </shape>
+    </item>
+    <item android:left="75dp" android:right="75dp" android:top="130dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2D6A4F" />
+        </shape>
+    </item>
+    <item android:left="105dp" android:right="105dp" android:top="150dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+        </shape>
+    </item>
+    <!-- Sacred freshwater pool with green/teal sacred reflection -->
+    <item android:left="130dp" android:right="130dp" android:top="170dp" android:bottom="10dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#52B788"
+                android:endColor="#2C6E63"
+                android:angle="270" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Deepstambha (lamp pillar) silhouette at edge of tank -->
+    <item android:left="115dp" android:right="235dp" android:top="120dp" android:bottom="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+            <corners android:topLeftRadius="4dp" android:topRightRadius="4dp" />
+        </shape>
+    </item>
+    <!-- Diya / lamp golden flame on pillar -->
+    <item android:left="120dp" android:right="240dp" android:top="110dp" android:bottom="120dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFD43B" />
+        </shape>
+    </item>
+</layer-list>

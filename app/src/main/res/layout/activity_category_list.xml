@@ -7,6 +7,7 @@
     android:background="@color/warm_ivory_surface"
     android:orientation="vertical">
 
+    <!-- Top App Bar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,48 +19,181 @@
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_arrow_back"
             app:navigationIconTint="@color/white"
-            app:title="Category"
-            app:titleTextColor="@color/white" />
+            app:titleTextColor="@color/white"
+            tools:title="Hidden Gems" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <!-- Module header card -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/forest_green_primary"
-        android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="16dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/forest_green_primary"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp">
 
-        <TextView
-            android:id="@+id/tvCategorySubtitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/teal_pale"
-            android:textSize="13sp"
-            tools:text="Handpicked authentic corners with rich colonial history and secluded charm." />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvCategoryCount"
+            <TextView
+                android:id="@+id/tvCategorySubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/teal_pale"
+                android:textSize="13sp"
+                android:lineSpacingExtra="2dp"
+                tools:text="Lesser-known neighbourhood marvels, quiet heritage enclaves, and secluded corners away from usual tourist trails." />
+
+            <TextView
+                android:id="@+id/tvCategoryCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/forest_green_pale"
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/forest_green_primary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="12 verified spots found" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Contextual Banner: First Time in Mumbai Transit Hacks -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFirstTimeTransitTips"
+        style="@style/SheherseCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:textColor="@color/warm_ivory_background"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            tools:text="6 verified spots found" />
-    </LinearLayout>
+            android:background="@color/gold_light"
+            android:orientation="vertical"
+            android:padding="14dp">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚆 Essential Transit Hacks"
+                    android:textColor="@color/gold_dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPlanFirstDay"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/forest_green_primary"
+                    android:text="Plan My Day ✨"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="• Avoid peak locals (8:30–10:30 AM &amp; 6–8:30 PM)\n• Autos run strictly by meter (suburbs only, no autos in South Bombay)\n• Download UTS app for unreserved local train tickets\n• Sunset at Marine Drive is best between 5:45 PM and 6:45 PM"
+                android:textColor="@color/text_primary"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Contextual Banner: Hidden Gem Community Contribution -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHiddenGemsSubmitBanner"
+        style="@style/SheherseCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/forest_green_pale"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_gem"
+                app:tint="@color/forest_green_primary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Know a Secret Spot?"
+                    android:textColor="@color/forest_green_dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share it with the SheherSe explorer community."
+                    android:textColor="@color/forest_green_medium"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitGemFromCategory"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:backgroundTint="@color/forest_green_primary"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Places List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCategoryPlaces"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="20dp"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
         tools:listitem="@layout/item_place" />
 
+    <!-- Empty state -->
     <LinearLayout
         android:id="@+id/layoutCategoryEmpty"
         android:layout_width="match_parent"
@@ -67,23 +201,33 @@
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="32dp"
+        android:padding="40dp"
         android:visibility="gone">
-
-        <ImageView
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:src="@drawable/ic_search"
-            app:tint="@color/text_hint" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="No places found in this category"
+            android:text="🔍"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="No places found in this category yet."
             android:textColor="@color/text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Check back soon as our Mumbai curators add more verified spots."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margins and Padding -->
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">12dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="spacing_huge">32dp</dimen>
+
+    <!-- Card Radii -->
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_medium">12dp</dimen>
+    <dimen name="corner_radius_normal">16dp</dimen>
+    <dimen name="corner_radius_large">20dp</dimen>
+    <dimen name="corner_radius_pill">100dp</dimen>
+
+    <!-- Card Elevation -->
+    <dimen name="card_elevation_subtle">1dp</dimen>
+    <dimen name="card_elevation_normal">2dp</dimen>
+
+    <!-- Stroke -->
+    <dimen name="card_stroke_width">1dp</dimen>
+
+    <!-- Image Card Heights -->
+    <dimen name="image_card_height_small">120dp</dimen>
+    <dimen name="image_card_height_normal">160dp</dimen>
+    <dimen name="image_card_height_hero">220dp</dimen>
+</resources>

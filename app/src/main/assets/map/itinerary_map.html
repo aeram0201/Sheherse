@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SheherSe Route Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FBF9F4;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+            background-color: #EDE8DE;
+        }
+        .stop-marker {
+            background-color: #1B4D3E;
+            color: #FFFFFF;
+            border: 2px solid #D4AF37;
+            border-radius: 50%;
+            width: 26px !important;
+            height: 26px !important;
+            margin-left: -13px !important;
+            margin-top: -13px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .start-marker {
+            background-color: #008080;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            width: 24px !important;
+            height: 24px !important;
+            margin-left: -12px !important;
+            margin-top: -12px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 2px;
+        }
+        .popup-card {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #1F2421;
+        }
+        .popup-title {
+            font-weight: bold;
+            color: #1B4D3E;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+        .popup-subtitle {
+            color: #6C7A72;
+            font-size: 11px;
+            margin-bottom: 4px;
+        }
+        .popup-btn {
+            display: inline-block;
+            background-color: #1B4D3E;
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = null;
+        var markersLayer = null;
+        var routeLayer = null;
+
+        function initMap() {
+            try {
+                // Default center to South Mumbai
+                map = L.map('map', {
+                    zoomControl: true,
+                    attributionControl: false
+                }).setView([18.9388, 72.8354], 13);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19
+                }).addTo(map);
+
+                markersLayer = L.layerGroup().addTo(map);
+                routeLayer = L.layerGroup().addTo(map);
+
+                if (window.AndroidBridge && window.AndroidBridge.onMapReady) {
+                    window.AndroidBridge.onMapReady();
+                }
+            } catch (e) {
+                if (window.AndroidBridge && window.AndroidBridge.onMapError) {
+                    window.AndroidBridge.onMapError(e.message || "Failed to initialize map");
+                }
+            }
+        }
+
+        function renderItinerary(dataStr) {
+            try {
+                if (!map) initMap();
+                markersLayer.clearLayers();
+                routeLayer.clearLayers();
+
+                var data = (typeof dataStr === 'string') ? JSON.parse(dataStr) : dataStr;
+                var latlngs = [];
+
+                // Render stops
+                if (data.stops && data.stops.length > 0) {
+                    for (var i = 0; i < data.stops.length; i++) {
+                        var stop = data.stops[i];
+                        if (!stop.lat || !stop.lon || (stop.lat === 0 && stop.lon === 0)) continue;
+
+                        var pt = [stop.lat, stop.lon];
+                        latlngs.push(pt);
+
+                        var iconHtml = '<div class="stop-marker">' + (i + 1) + '</div>';
+                        var customIcon = L.divIcon({
+                            html: iconHtml,
+                            className: '',
+                            iconSize: [26, 26]
+                        });
+
+                        (function(s, idx) {
+                            var marker = L.marker(pt, { icon: customIcon }).addTo(markersLayer);
+                            var popupContent = '<div class="popup-card">' +
+                                '<div class="popup-title">' + (idx + 1) + '. ' + escapeHtml(s.name) + '</div>' +
+                                '<div class="popup-subtitle">' + escapeHtml(s.area || '') + ' • ' + escapeHtml(s.timeWindow || '') + '</div>' +
+                                '<div style="color:#1B4D3E; font-weight:bold; font-size:11px;">' + escapeHtml(s.costText || '') + '</div>' +
+                                '<div class="popup-btn" onclick="onStopClick(\'' + s.placeId + '\', ' + idx + ')">View Stop Details</div>' +
+                                '</div>';
+                            marker.bindPopup(popupContent);
+                            marker.on('click', function() {
+                                if (window.AndroidBridge && window.AndroidBridge.onMarkerClick) {
+                                    window.AndroidBridge.onMarkerClick(s.placeId, idx);
+                                }
+                            });
+                        })(stop, i);
+                    }
+                }
+
+                // Draw route line
+                if (latlngs.length > 1) {
+                    var polyline = L.polyline(latlngs, {
+                        color: '#008080',
+                        weight: 4,
+                        opacity: 0.85,
+                        dashArray: '6, 6',
+                        lineCap: 'round'
+                    }).addTo(routeLayer);
+
+                    polyline.on('click', function() {
+                        if (window.AndroidBridge && window.AndroidBridge.onLegClick) {
+                            window.AndroidBridge.onLegClick(0, 1);
+                        }
+                    });
+
+                    map.fitBounds(polyline.getBounds(), { padding: [30, 30] });
+                } else if (latlngs.length === 1) {
+                    map.setView(latlngs[0], 14);
+                }
+            } catch (err) {
+                if (window.AndroidBridge && window.AndroidBridge.onMapError) {
+                    window.AndroidBridge.onMapError(err.message || "Failed to render route");
+                }
+            }
+        }
+
+        function onStopClick(placeId, index) {
+            if (window.AndroidBridge && window.AndroidBridge.onMarkerClick) {
+                window.AndroidBridge.onMarkerClick(placeId, index);
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return "";
+            return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+        }
+
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+</body>
+</html>

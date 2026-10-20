@@ -78,4 +78,15 @@
     <string name="login_as_explorer">Demo Explorer (Arjun Mehta)</string>
     <string name="login_as_guide">Demo Guide (Farhan Qureshi)</string>
     <string name="login_as_owner">Demo Owner (Pooja Desai)</string>
+
+    <!-- Module headers -->
+    <string name="module_explore">Explore Mumbai</string>
+    <string name="module_first_time">First Time in Mumbai?</string>
+    <string name="module_hidden_gems">Hidden Gems</string>
+    <string name="module_study_work">Study &amp; Work Spaces</string>
+    <string name="module_affordable_eats">Affordable Eats</string>
+    <string name="module_events">Events &amp; Local Experiences</string>
+    <string name="module_ai_planner">AI Smart Trip Planner</string>
+    <string name="tagline_discover">Discover the city, from the city.</string>
+
 </resources>

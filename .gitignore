@@ -11,3 +11,11 @@ local.properties
 *.apk
 *.aar
 app/build/
+
+# Python
+__pycache__/
+*.py[cod]
+ml-service/venv/
+ml-service/.venv/
+ml-service/.env
+

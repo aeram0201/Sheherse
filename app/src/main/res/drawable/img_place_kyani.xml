@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm vintage cafe mahogany / amber background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FEF3C7"
+                android:centerColor="#D97706"
+                android:endColor="#451A03"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Vintage 1904 wooden heritage mirror frame arch -->
+    <item android:left="30dp" android:right="30dp" android:top="15dp" android:bottom="95dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+            <corners android:topLeftRadius="60dp" android:topRightRadius="60dp" />
+        </shape>
+    </item>
+    <item android:left="40dp" android:right="40dp" android:top="25dp" android:bottom="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FDF6E2" />
+            <corners android:topLeftRadius="50dp" android:topRightRadius="50dp" />
+        </shape>
+    </item>
+    <!-- Classic red-and-white checkered tablecloth table -->
+    <item android:top="130dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#DC2626" />
+        </shape>
+    </item>
+    <!-- Checkered white squares pattern on table -->
+    <item android:left="10dp" android:right="310dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <item android:left="70dp" android:right="250dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <item android:left="130dp" android:right="190dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <item android:left="190dp" android:right="130dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <item android:left="250dp" android:right="70dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <item android:left="310dp" android:right="10dp" android:top="135dp" android:bottom="65dp">
+        <shape android:shape="rectangle"><solid android:color="#FFFFFF" /></shape>
+    </item>
+    <!-- Legendary cutting chai glass on table -->
+    <item android:left="75dp" android:right="235dp" android:top="75dp" android:bottom="70dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#90FFFFFF" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item android:left="80dp" android:right="240dp" android:top="90dp" android:bottom="75dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D97706" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Crispy Bun Maska plate with golden glazed bun -->
+    <item android:left="160dp" android:right="70dp" android:top="115dp" android:bottom="55dp">
+        <shape android:shape="oval">
+            <solid android:color="#FAF8F2" />
+        </shape>
+    </item>
+    <item android:left="175dp" android:right="90dp" android:top="105dp" android:bottom="68dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Butter strip in bun -->
+    <item android:left="185dp" android:right="105dp" android:top="115dp" android:bottom="80dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FEF3C7" />
+        </shape>
+    </item>
+</layer-list>

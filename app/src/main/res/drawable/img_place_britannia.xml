@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Colonial Ballard Estate European stone street background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:centerColor="#E6E0D2"
+                android:endColor="#78350F"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Ballard Estate Wakefield House Renaissance Revival arched windows -->
+    <item android:left="30dp" android:right="250dp" android:top="20dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#4E5D54" />
+            <corners android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+        </shape>
+    </item>
+    <item android:left="140dp" android:right="140dp" android:top="20dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#4E5D54" />
+            <corners android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+        </shape>
+    </item>
+    <item android:left="250dp" android:right="30dp" android:top="20dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#4E5D54" />
+            <corners android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+        </shape>
+    </item>
+    <!-- Restaurant dining table -->
+    <item android:top="115dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F4F0E6" />
+        </shape>
+    </item>
+    <!-- Famous Berry Pulao oval porcelain serving bowl -->
+    <item android:left="70dp" android:right="150dp" android:top="105dp" android:bottom="55dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <!-- Saffron yellow rice mound -->
+    <item android:left="85dp" android:right="165dp" android:top="100dp" android:bottom="65dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Zereshk red Iranian tart barberries sprinkled on top -->
+    <item android:left="100dp" android:right="235dp" android:top="110dp" android:bottom="115dp"><shape android:shape="oval"><solid android:color="#DC2626" /></shape></item>
+    <item android:left="120dp" android:right="215dp" android:top="105dp" android:bottom="120dp"><shape android:shape="oval"><solid android:color="#DC2626" /></shape></item>
+    <item android:left="140dp" android:right="195dp" android:top="112dp" android:bottom="112dp"><shape android:shape="oval"><solid android:color="#DC2626" /></shape></item>
+    <item android:left="160dp" android:right="175dp" android:top="108dp" android:bottom="117dp"><shape android:shape="oval"><solid android:color="#DC2626" /></shape></item>
+    <!-- Tall bottle of chilled Duke's Raspberry Soda -->
+    <item android:left="240dp" android:right="80dp" android:top="65dp" android:bottom="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E05A47" />
+            <corners android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+        </shape>
+    </item>
+    <item android:left="250dp" android:right="90dp" android:top="50dp" android:bottom="165dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

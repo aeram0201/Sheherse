@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Left page outline (white) -->
+    <path
+        android:pathData="M2,3H8A4,4 0 0,1 12,7V21A3,3 0 0,0 9,18H2Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <!-- Right page outline (white) -->
+    <path
+        android:pathData="M22,3H16A4,4 0 0,0 12,7V21A3,3 0 0,1 15,18H22Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <!-- Book spine / bookmark center line (subtle gold accent) -->
+    <path
+        android:pathData="M12,7V21"
+        android:strokeColor="#D4AF37"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+</vector>

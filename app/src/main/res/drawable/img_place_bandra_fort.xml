@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Golden sunset over Arabian Sea from Bandstand Land's End -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#D97706"
+                android:centerColor="#E05A47"
+                android:endColor="#081C15"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Arabian Sea waters -->
+    <item android:top="110dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#1B4332"
+                android:endColor="#081C15"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Bandra-Worli Sea Link cable-stayed bridge towers in the distance -->
+    <item android:left="170dp" android:right="180dp" android:top="40dp" android:bottom="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#70FFFFFF" />
+        </shape>
+    </item>
+    <!-- Sea Link suspension cables diagonal glow -->
+    <item android:left="120dp" android:right="120dp" android:top="65dp" android:bottom="130dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#00FFFFFF"
+                android:centerColor="#80FFD43B"
+                android:endColor="#00FFFFFF"
+                android:angle="0" />
+        </shape>
+    </item>
+    <!-- 17th Century Portuguese watchtower stone bastions (Castella de Aguada) -->
+    <item android:left="20dp" android:right="200dp" android:top="80dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#19201D" />
+            <corners android:topLeftRadius="8dp" />
+        </shape>
+    </item>
+    <!-- Stone watch arch portal -->
+    <item android:left="50dp" android:right="250dp" android:top="110dp" android:bottom="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D97706" />
+            <corners android:topLeftRadius="25dp" android:topRightRadius="25dp" />
+        </shape>
+    </item>
+    <!-- Stone ramparts and amphitheatre steps -->
+    <item android:left="40dp" android:right="40dp" android:top="160dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <item android:left="20dp" android:right="20dp" android:top="180dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#19201D" />
+        </shape>
+    </item>
+    <item android:top="200dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+</layer-list>

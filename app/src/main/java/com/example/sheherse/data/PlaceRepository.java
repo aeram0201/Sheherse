@@ -7,6 +7,7 @@ import com.example.sheherse.model.CommunitySubmission;
 import com.example.sheherse.model.Enquiry;
 import com.example.sheherse.model.Event;
 import com.example.sheherse.model.Itinerary;
+import com.example.sheherse.model.MenuItem;
 import com.example.sheherse.model.Place;
 import com.example.sheherse.model.TourListing;
 import com.google.gson.Gson;
@@ -928,6 +929,83 @@ public class PlaceRepository {
                 CommunitySubmission.STATUS_PENDING,
                 5
         ));
+
+        attachCuratedMenus();
+    }
+
+    private void attachCuratedMenus() {
+        Place kyani = placesMap.get("place_kyani");
+        if (kyani != null) {
+            kyani.setMenuItems(Arrays.asList(
+                    new MenuItem("Bun Maska & Irani Chai", 60, true, "VEGETARIAN", "Fresh crusty bun with salted Amul butter paired with slow-brewed sweet Irani cutting chai.", "Signature breakfast combo served continuously since 1904.", "Kyani & Co. Heritage Menu (Curated 2026)"),
+                    new MenuItem("Parsi Mawa Cake", 35, true, "VEGETARIAN", "Cardamom-scented dense sponge cake baked fresh in heritage ovens.", "Iconic Mumbai takeaway cake.", "Kyani & Co. Heritage Menu (Curated 2026)"),
+                    new MenuItem("Chicken Farcha", 160, true, "NON_VEG", "Spiced fried chicken coated in crispy egg-laced batter.", "Quintessential Parsi feast classic.", "Kyani & Co. Heritage Menu (Curated 2026)"),
+                    new MenuItem("Kheema Pav", 140, true, "NON_VEG", "Spicy minced mutton gravy served with hot ladi pav.", "Beloved spicy Mumbai morning staple.", "Kyani & Co. Heritage Menu (Curated 2026)")
+            ));
+        }
+
+        Place britannia = placesMap.get("place_britannia");
+        if (britannia != null) {
+            britannia.setMenuItems(Arrays.asList(
+                    new MenuItem("Mutton Berry Pulao", 450, true, "NON_VEG", "Fragrant basmati rice crowned with Iranian barberries (zereshk) and slow-braised mutton.", "Legendary dish created by late Mr. Boman Kohinoor.", "Britannia & Co. Menu (Curated 2026)"),
+                    new MenuItem("Veg Berry Pulao", 350, true, "VEGETARIAN", "Barberry rice tossed with paneer, spiced vegetables, and cashews.", "Rich vegetarian adaptation of the Persian classic.", "Britannia & Co. Menu (Curated 2026)"),
+                    new MenuItem("Sali Boti with Pav", 380, true, "NON_VEG", "Sweet and tangy mutton curry blanketed with crisp potato shoestrings.", "Authentic Parsi sweet-sour flavor profile.", "Britannia & Co. Menu (Curated 2026)"),
+                    new MenuItem("Caramel Custard", 120, true, "VEGETARIAN", "Steamed golden egg custard dripping with amber caramel sauce.", "The gold standard of Mumbai caramel custards.", "Britannia & Co. Menu (Curated 2026)")
+            ));
+        }
+
+        Place kitabKhana = placesMap.get("place_kitab_khana");
+        if (kitabKhana != null) {
+            kitabKhana.setMenuItems(Arrays.asList(
+                    new MenuItem("Artisanal Cappuccino & Biscotti", 180, true, "BEVERAGE", "Freshly roasted Arabica espresso with velvety milk foam and house biscotti.", "Perfect pairing while reading in the high-ceilinged bookstore.", "Somethings Gourmet Cafe Menu (Curated 2026)"),
+                    new MenuItem("Grilled Pesto & Bocconcini Panini", 240, true, "VEGETARIAN", "Basil pesto, fresh bocconcini cheese, and ripe tomato pressed in sourdough.", "Wholesome, quiet light lunch in Fort.", "Somethings Gourmet Cafe Menu (Curated 2026)")
+            ));
+        }
+
+        Place candies = placesMap.get("place_candies_bandra");
+        if (candies != null) {
+            candies.setMenuItems(Arrays.asList(
+                    new MenuItem("Macaroni & Sweet Corn Salad", 120, true, "VEGETARIAN", "Chilled pasta salad with crunchy capsicum, corn, and house cream dressing.", "Bandra youth staple since the 1990s.", "Candies Pali Hill Menu (Curated 2026)"),
+                    new MenuItem("Chicken Mini Burgers (Plate)", 150, true, "NON_VEG", "Spiced chicken patties in miniature sesame buns with mint slaw.", "Fast, satisfying snack in the sprawling villa courtyard.", "Candies Pali Hill Menu (Curated 2026)"),
+                    new MenuItem("Blended Iced Mocha", 130, true, "BEVERAGE", "Thick blended iced chocolate espresso shake with dark chocolate drizzle.", "Refreshing cold coffee for Mumbai afternoons.", "Candies Pali Hill Menu (Curated 2026)")
+            ));
+        }
+
+        Place guruKripa = placesMap.get("place_guru_kripa");
+        if (guruKripa != null) {
+            guruKripa.setMenuItems(Arrays.asList(
+                    new MenuItem("Samosa with Chole", 60, true, "VEGETARIAN", "Two crushed crispy samosas drenched in thick spiced Sindhi chole with tamarind chutney.", "Supplies samosas to famous Mumbai cinema halls for decades.", "Guru Kripa Menu (Curated 2026)"),
+                    new MenuItem("Dal Pakwan", 70, true, "VEGETARIAN", "Crispy cumin crackers served with spicy chana dal and chopped onion chutney.", "Traditional authentic Sindhi breakfast.", "Guru Kripa Menu (Curated 2026)")
+            ));
+        }
+
+        Place ashok = placesMap.get("place_ashok_vada_pav");
+        if (ashok != null) {
+            ashok.setMenuItems(Collections.singletonList(
+                    new MenuItem("Kirti College Special Vada Pav", 30, true, "VEGETARIAN", "Hot potato vada packed into soft pav with spicy red garlic chutney and crisp besan chura.", "Frequently voted Mumbai's number one street vada pav.", "Ashok Stall Tariff (Curated 2026)")
+            ));
+        }
+
+        Place cannon = placesMap.get("place_cannon_pav_bhaji");
+        if (cannon != null) {
+            cannon.setMenuItems(Collections.singletonList(
+                    new MenuItem("Amul Butter Pav Bhaji", 140, true, "VEGETARIAN", "Spiced tomato vegetable mash topped with melted butter, chopped onions, and lemon with two pavs.", "Legendary quick meal opposite CSMT station.", "Cannon Refreshments Menu (Curated 2026)")
+            ));
+        }
+
+        Place sardar = placesMap.get("place_sardar_pav_bhaji");
+        if (sardar != null) {
+            sardar.setMenuItems(Collections.singletonList(
+                    new MenuItem("Cheese Butter Pav Bhaji", 220, true, "VEGETARIAN", "Ultra-buttery vegetable mash smothered in shredded cheese and hot buttered pavs.", "Famous for its decadent, unapologetic butter slab.", "Sardar Refreshments Menu (Curated 2026)")
+            ));
+        }
+
+        Place pancham = placesMap.get("place_pancham_puriwala");
+        if (pancham != null) {
+            pancham.setMenuItems(Collections.singletonList(
+                    new MenuItem("Pancham Special Thali (5 Puris)", 160, true, "VEGETARIAN", "Five assorted puris (palak, beetroot, masala, sada) served with aloo bhaji, chole, and raita.", "Historic establishment operating near VT since 1848.", "Pancham Puriwala Menu (Curated 2026)")
+            ));
+        }
     }
 
     private void addSeedPlace(Place p) {

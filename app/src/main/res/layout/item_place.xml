@@ -12,277 +12,306 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- Top Row: Category Chip, Status Badge & Save Icon -->
-        <RelativeLayout
+        <!-- Hero Image with overlaid badges -->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="160dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivPlaceHero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="Place image"
+                tools:src="@drawable/hero_explore_mumbai" />
 
-                <!-- Category Badge -->
-                <TextView
-                    android:id="@+id/tvPlaceCategory"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_badge_forest"
-                    android:textColor="@color/forest_green_primary"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:paddingStart="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="3dp"
-                    tools:text="Cultural" />
+            <!-- Bottom gradient for text legibility -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/gradient_bottom_dark" />
 
-                <!-- Verification Status Badge -->
-                <TextView
-                    android:id="@+id/tvPlaceStatusBadge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@color/status_verified_text"
-                    android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:paddingStart="8dp"
-                    android:paddingTop="3dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="3dp"
-                    tools:text="VERIFIED" />
-            </LinearLayout>
-
-            <!-- Save Heart Button -->
+            <!-- Heart / Save Button top-end -->
             <ImageButton
                 android:id="@+id/btnSavePlace"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="top|end"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_circle_translucent"
                 android:src="@drawable/ic_heart_outline"
                 android:contentDescription="@string/save"
-                app:tint="@color/text_secondary" />
-        </RelativeLayout>
+                android:padding="6dp"
+                app:tint="@color/white" />
 
-        <!-- Place Title -->
-        <TextView
-            android:id="@+id/tvPlaceName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Banganga Tank &amp; Walkeshwar" />
-
-        <!-- Area & Distance/Rating -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="14dp"
-                android:layout_height="14dp"
-                android:src="@drawable/ic_location"
-                app:tint="@color/teal_secondary" />
-
+            <!-- Category badge bottom-start -->
             <TextView
-                android:id="@+id/tvPlaceArea"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_weight="1"
-                android:textColor="@color/text_secondary"
-                android:textSize="13sp"
-                tools:text="Malabar Hill, South Mumbai" />
-
-            <!-- Rating -->
-            <ImageView
-                android:layout_width="14dp"
-                android:layout_height="14dp"
-                android:src="@drawable/ic_star"
-                app:tint="@color/gold_primary" />
-
-            <TextView
-                android:id="@+id/tvPlaceRating"
+                android:id="@+id/tvPlaceCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:textColor="@color/text_primary"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                tools:text="4.6" />
-        </LinearLayout>
-
-        <!-- Brief Description -->
-        <TextView
-            android:id="@+id/tvPlaceDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:textColor="@color/text_secondary"
-            android:textSize="13sp"
-            tools:text="One of the oldest wet docks in Mumbai, bustling with fishing trawlers at dawn and transformed by massive street art murals." />
-
-        <!-- Key Facilities / Amenities Chips Row -->
-        <LinearLayout
-            android:id="@+id/layoutFacilities"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/chipWifi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:background="@color/teal_pale"
-                android:paddingStart="6dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="6dp"
-                android:paddingBottom="2dp"
-                android:text="Wi-Fi"
-                android:textColor="@color/teal_secondary"
-                android:textSize="11sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/chipCharging"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:background="@color/teal_pale"
-                android:paddingStart="6dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="6dp"
-                android:paddingBottom="2dp"
-                android:text="Charging"
-                android:textColor="@color/teal_secondary"
-                android:textSize="11sp"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/chipQuiet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="6dp"
-                android:background="@color/forest_green_pale"
-                android:paddingStart="6dp"
-                android:paddingTop="2dp"
-                android:paddingEnd="6dp"
-                android:paddingBottom="2dp"
-                android:text="Quiet"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/forest_green_pale"
                 android:textColor="@color/forest_green_primary"
-                android:textSize="11sp"
-                android:visibility="gone" />
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingStart="8dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="3dp"
+                tools:text="Cultural" />
 
+            <!-- Verification status badge bottom, after category -->
             <TextView
-                android:id="@+id/tvDurationTag"
+                android:id="@+id/tvPlaceStatusBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_hint"
-                android:textSize="11sp"
-                tools:text="• 60 mins" />
-        </LinearLayout>
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_badge_rounded"
+                android:backgroundTint="@color/status_verified"
+                android:textColor="@color/status_verified_text"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingStart="6dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                tools:text="VERIFIED" />
+        </FrameLayout>
 
-        <!-- Divider -->
-        <View
+        <!-- Text content -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/warm_ivory_divider" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
 
-        <!-- Bottom Row: Price + Estimated Badge & Action Buttons -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <!-- Place name -->
+            <TextView
+                android:id="@+id/tvPlaceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Banganga Tank &amp; Walkeshwar" />
 
-            <!-- Cost Info -->
+            <!-- Area + Rating row -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/teal_secondary" />
+
+                <TextView
+                    android:id="@+id/tvPlaceArea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="Malabar Hill, South Mumbai" />
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_star"
+                    app:tint="@color/gold_primary" />
+
+                <TextView
+                    android:id="@+id/tvPlaceRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="4.6" />
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvPlaceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                tools:text="An ancient freshwater cistern dating back to the 12th century, encircled by old temples and quiet alleyways." />
+
+            <!-- Facilities chips -->
+            <LinearLayout
+                android:id="@+id/layoutFacilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvPlaceCost"
+                    android:id="@+id/chipWifi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/forest_green_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="₹80" />
-
-                <TextView
-                    android:id="@+id/tvEstimatedBadge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:background="@color/gold_light"
-                    android:paddingStart="4dp"
-                    android:paddingTop="1dp"
-                    android:paddingEnd="4dp"
-                    android:paddingBottom="1dp"
-                    android:text="@string/estimate_label"
-                    android:textColor="@color/gold_dark"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/teal_pale"
+                    android:paddingStart="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="2dp"
+                    android:text="WiFi"
+                    android:textColor="@color/teal_secondary"
                     android:textSize="10sp"
                     android:textStyle="bold"
                     android:visibility="gone" />
-            </LinearLayout>
 
-            <!-- Action Buttons: Share & Directions -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <!-- Share -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSharePlace"
-                    style="@style/Widget.Material3.Button.IconButton"
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    app:icon="@drawable/ic_share"
-                    app:iconTint="@color/teal_secondary"
-                    android:contentDescription="@string/share" />
-
-                <!-- Directions -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnDirectionsPlace"
-                    style="@style/Widget.Material3.Button.TonalButton"
+                <TextView
+                    android:id="@+id/chipCharging"
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="4dp"
-                    android:backgroundTint="@color/forest_green_pale"
-                    android:text="@string/directions"
-                    android:textColor="@color/forest_green_primary"
-                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/teal_pale"
+                    android:paddingStart="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="2dp"
+                    android:text="Charging"
+                    android:textColor="@color/teal_secondary"
+                    android:textSize="10sp"
                     android:textStyle="bold"
-                    app:icon="@drawable/ic_directions"
-                    app:iconTint="@color/forest_green_primary"
-                    app:iconSize="14dp" />
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chipQuiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="@color/forest_green_pale"
+                    android:paddingStart="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="7dp"
+                    android:paddingBottom="2dp"
+                    android:text="Quiet"
+                    android:textColor="@color/forest_green_primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvDurationTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_hint"
+                    android:textSize="10sp"
+                    tools:text="• 60 mins" />
             </LinearLayout>
-        </RelativeLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/warm_ivory_divider" />
+
+            <!-- Bottom row: cost + actions -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPlaceCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        tools:text="₹80" />
+
+                    <TextView
+                        android:id="@+id/tvEstimatedBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/bg_badge_rounded"
+                        android:backgroundTint="@color/gold_light"
+                        android:paddingStart="4dp"
+                        android:paddingTop="1dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="1dp"
+                        android:text="@string/estimate_label"
+                        android:textColor="@color/gold_dark"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSharePlace"
+                        style="@style/Widget.Material3.Button.IconButton"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:contentDescription="@string/share"
+                        app:icon="@drawable/ic_share"
+                        app:iconSize="18dp"
+                        app:iconTint="@color/teal_secondary" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDirectionsPlace"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="2dp"
+                        android:backgroundTint="@color/forest_green_pale"
+                        android:text="@string/directions"
+                        android:textColor="@color/forest_green_primary"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        app:icon="@drawable/ic_directions"
+                        app:iconSize="14dp"
+                        app:iconTint="@color/forest_green_primary" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

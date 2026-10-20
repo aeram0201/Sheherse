@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +22,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.sheherse.adapter.PlaceAdapter;
 import com.example.sheherse.data.PlaceRepository;
 import com.example.sheherse.model.Place;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
 import java.util.ArrayList;
@@ -35,16 +38,14 @@ public class ExploreFragment extends Fragment {
     private EditText etSearch;
     private ImageButton btnClearSearch;
 
-    private TextView tagQuickWifi;
-    private TextView tagQuickFree;
-    private TextView tagQuickSunset;
-    private TextView tagQuickChai;
-    private TextView tagQuickQuiet;
-
     private ChipGroup chipGroupCategory;
-    private ChipGroup chipGroupArea;
-    private TextView tvResultsCount;
+    private View btnOpenFilterSheet;
+    private TextView tvFilterLabel;
+    private TextView tvFilterBadge;
+    private View btnOpenSortDialog;
     private TextView tvSortToggle;
+    private TextView tvResultsCount;
+    private TextView btnClearAllFilters;
 
     private RecyclerView rvExplorePlaces;
     private View layoutEmptyExplore;
@@ -55,10 +56,16 @@ public class ExploreFragment extends Fragment {
     private final List<Place> allPlaces = new ArrayList<>();
     private final List<Place> filteredPlaces = new ArrayList<>();
 
+    // Active Filter State
     private String selectedCategory = "ALL";
     private String selectedArea = "ALL";
-    private String quickTag = "";
-    private int sortMode = 0; // 0: Curated, 1: Rating, 2: Price Low->High
+    private String selectedBudget = "ALL"; // ALL, FREE, 100, 200
+    private boolean filterWifi = false;
+    private boolean filterCharging = false;
+    private boolean filterQuiet = false;
+    private boolean filterSunset = false;
+    private boolean filterGemsOnly = false;
+    private int sortMode = 0; // 0: Curated, 1: Rating, 2: Price Low->High, 3: Price High->Low
 
     @Nullable
     @Override
@@ -74,9 +81,9 @@ public class ExploreFragment extends Fragment {
 
         initViews(view);
         setupSearch();
-        setupQuickTags();
-        setupChips();
-        setupSortToggle();
+        setupCategoryChips();
+        setupFilterSheetButton();
+        setupSortDialogButton();
         setupRecyclerView();
         loadAllPlaces();
     }
@@ -86,16 +93,14 @@ public class ExploreFragment extends Fragment {
         etSearch = view.findViewById(R.id.etSearch);
         btnClearSearch = view.findViewById(R.id.btnClearSearch);
 
-        tagQuickWifi = view.findViewById(R.id.tagQuickWifi);
-        tagQuickFree = view.findViewById(R.id.tagQuickFree);
-        tagQuickSunset = view.findViewById(R.id.tagQuickSunset);
-        tagQuickChai = view.findViewById(R.id.tagQuickChai);
-        tagQuickQuiet = view.findViewById(R.id.tagQuickQuiet);
-
         chipGroupCategory = view.findViewById(R.id.chipGroupCategory);
-        chipGroupArea = view.findViewById(R.id.chipGroupArea);
-        tvResultsCount = view.findViewById(R.id.tvResultsCount);
+        btnOpenFilterSheet = view.findViewById(R.id.btnOpenFilterSheet);
+        tvFilterLabel = view.findViewById(R.id.tvFilterLabel);
+        tvFilterBadge = view.findViewById(R.id.tvFilterBadge);
+        btnOpenSortDialog = view.findViewById(R.id.btnOpenSortDialog);
         tvSortToggle = view.findViewById(R.id.tvSortToggle);
+        tvResultsCount = view.findViewById(R.id.tvResultsCount);
+        btnClearAllFilters = view.findViewById(R.id.btnClearAllFilters);
 
         rvExplorePlaces = view.findViewById(R.id.rvExplorePlaces);
         layoutEmptyExplore = view.findViewById(R.id.layoutEmptyExplore);
@@ -103,6 +108,7 @@ public class ExploreFragment extends Fragment {
 
         btnSurpriseMe.setOnClickListener(v -> surpriseMe());
         btnResetFilters.setOnClickListener(v -> resetFilters());
+        btnClearAllFilters.setOnClickListener(v -> resetFilters());
     }
 
     private void setupSearch() {
@@ -126,39 +132,7 @@ public class ExploreFragment extends Fragment {
         });
     }
 
-    private void setupQuickTags() {
-        View.OnClickListener tagClickListener = v -> {
-            int id = v.getId();
-            if (id == R.id.tagQuickWifi) {
-                toggleQuickTag("wifi");
-            } else if (id == R.id.tagQuickFree) {
-                toggleQuickTag("free");
-            } else if (id == R.id.tagQuickSunset) {
-                toggleQuickTag("sunset");
-            } else if (id == R.id.tagQuickChai) {
-                toggleQuickTag("chai");
-            } else if (id == R.id.tagQuickQuiet) {
-                toggleQuickTag("quiet");
-            }
-        };
-
-        tagQuickWifi.setOnClickListener(tagClickListener);
-        tagQuickFree.setOnClickListener(tagClickListener);
-        tagQuickSunset.setOnClickListener(tagClickListener);
-        tagQuickChai.setOnClickListener(tagClickListener);
-        tagQuickQuiet.setOnClickListener(tagClickListener);
-    }
-
-    private void toggleQuickTag(String tag) {
-        if (quickTag.equals(tag)) {
-            quickTag = "";
-        } else {
-            quickTag = tag;
-        }
-        applyFilters();
-    }
-
-    private void setupChips() {
+    private void setupCategoryChips() {
         chipGroupCategory.setOnCheckedStateChangeListener((group, checkedIds) -> {
             if (checkedIds.contains(R.id.chipCatCultural)) {
                 selectedCategory = "Cultural";
@@ -175,35 +149,150 @@ public class ExploreFragment extends Fragment {
             }
             applyFilters();
         });
-
-        chipGroupArea.setOnCheckedStateChangeListener((group, checkedIds) -> {
-            if (checkedIds.contains(R.id.chipAreaSouth)) {
-                selectedArea = "South";
-            } else if (checkedIds.contains(R.id.chipAreaFort)) {
-                selectedArea = "Fort";
-            } else if (checkedIds.contains(R.id.chipAreaBandra)) {
-                selectedArea = "Bandra";
-            } else if (checkedIds.contains(R.id.chipAreaDadar)) {
-                selectedArea = "Dadar";
-            } else {
-                selectedArea = "ALL";
-            }
-            applyFilters();
-        });
     }
 
-    private void setupSortToggle() {
-        tvSortToggle.setOnClickListener(v -> {
-            sortMode = (sortMode + 1) % 3;
-            if (sortMode == 0) {
-                tvSortToggle.setText("Sort: Curated ▾");
-            } else if (sortMode == 1) {
-                tvSortToggle.setText("Sort: Rating ★ ▾");
-            } else {
-                tvSortToggle.setText("Sort: Price (Low) ▾");
-            }
+    private void setupFilterSheetButton() {
+        btnOpenFilterSheet.setOnClickListener(v -> showFilterBottomSheet());
+    }
+
+    private void showFilterBottomSheet() {
+        BottomSheetDialog dialog = new BottomSheetDialog(requireContext());
+        View sheetView = getLayoutInflater().inflate(R.layout.dialog_explore_filters, null);
+        dialog.setContentView(sheetView);
+
+        ChipGroup sheetChipGroupArea = sheetView.findViewById(R.id.sheetChipGroupArea);
+        ChipGroup sheetChipGroupBudget = sheetView.findViewById(R.id.sheetChipGroupBudget);
+        Chip sheetChipWifi = sheetView.findViewById(R.id.sheetChipWifi);
+        Chip sheetChipCharging = sheetView.findViewById(R.id.sheetChipCharging);
+        Chip sheetChipQuiet = sheetView.findViewById(R.id.sheetChipQuiet);
+        Chip sheetChipSunset = sheetView.findViewById(R.id.sheetChipSunset);
+        Chip sheetChipGems = sheetView.findViewById(R.id.sheetChipGems);
+        TextView btnSheetReset = sheetView.findViewById(R.id.btnSheetReset);
+        MaterialButton btnSheetApply = sheetView.findViewById(R.id.btnSheetApply);
+
+        // Pre-select current area
+        if ("South".equalsIgnoreCase(selectedArea)) {
+            sheetChipGroupArea.check(R.id.sheetChipAreaSouth);
+        } else if ("Fort".equalsIgnoreCase(selectedArea)) {
+            sheetChipGroupArea.check(R.id.sheetChipAreaFort);
+        } else if ("Bandra".equalsIgnoreCase(selectedArea)) {
+            sheetChipGroupArea.check(R.id.sheetChipAreaBandra);
+        } else if ("Dadar".equalsIgnoreCase(selectedArea)) {
+            sheetChipGroupArea.check(R.id.sheetChipAreaDadar);
+        } else {
+            sheetChipGroupArea.check(R.id.sheetChipAreaAll);
+        }
+
+        // Pre-select current budget
+        if ("FREE".equalsIgnoreCase(selectedBudget)) {
+            sheetChipGroupBudget.check(R.id.sheetChipBudgetFree);
+        } else if ("100".equalsIgnoreCase(selectedBudget)) {
+            sheetChipGroupBudget.check(R.id.sheetChipBudget100);
+        } else if ("200".equalsIgnoreCase(selectedBudget)) {
+            sheetChipGroupBudget.check(R.id.sheetChipBudget200);
+        } else {
+            sheetChipGroupBudget.check(R.id.sheetChipBudgetAll);
+        }
+
+        // Pre-select facilities
+        sheetChipWifi.setChecked(filterWifi);
+        sheetChipCharging.setChecked(filterCharging);
+        sheetChipQuiet.setChecked(filterQuiet);
+        sheetChipSunset.setChecked(filterSunset);
+        sheetChipGems.setChecked(filterGemsOnly);
+
+        // Reset inside sheet
+        btnSheetReset.setOnClickListener(rv -> {
+            sheetChipGroupArea.check(R.id.sheetChipAreaAll);
+            sheetChipGroupBudget.check(R.id.sheetChipBudgetAll);
+            sheetChipWifi.setChecked(false);
+            sheetChipCharging.setChecked(false);
+            sheetChipQuiet.setChecked(false);
+            sheetChipSunset.setChecked(false);
+            sheetChipGems.setChecked(false);
+        });
+
+        // Apply filters
+        btnSheetApply.setOnClickListener(av -> {
+            // Read area
+            int areaId = sheetChipGroupArea.getCheckedChipId();
+            if (areaId == R.id.sheetChipAreaSouth) selectedArea = "South";
+            else if (areaId == R.id.sheetChipAreaFort) selectedArea = "Fort";
+            else if (areaId == R.id.sheetChipAreaBandra) selectedArea = "Bandra";
+            else if (areaId == R.id.sheetChipAreaDadar) selectedArea = "Dadar";
+            else selectedArea = "ALL";
+
+            // Read budget
+            int budgetId = sheetChipGroupBudget.getCheckedChipId();
+            if (budgetId == R.id.sheetChipBudgetFree) selectedBudget = "FREE";
+            else if (budgetId == R.id.sheetChipBudget100) selectedBudget = "100";
+            else if (budgetId == R.id.sheetChipBudget200) selectedBudget = "200";
+            else selectedBudget = "ALL";
+
+            // Read facilities
+            filterWifi = sheetChipWifi.isChecked();
+            filterCharging = sheetChipCharging.isChecked();
+            filterQuiet = sheetChipQuiet.isChecked();
+            filterSunset = sheetChipSunset.isChecked();
+            filterGemsOnly = sheetChipGems.isChecked();
+
+            dialog.dismiss();
             applyFilters();
         });
+
+        dialog.show();
+    }
+
+    private void setupSortDialogButton() {
+        View.OnClickListener sortClickListener = v -> showSortBottomSheet();
+        btnOpenSortDialog.setOnClickListener(sortClickListener);
+        tvSortToggle.setOnClickListener(sortClickListener);
+    }
+
+    private void showSortBottomSheet() {
+        BottomSheetDialog dialog = new BottomSheetDialog(requireContext());
+        View sheetView = getLayoutInflater().inflate(R.layout.dialog_explore_sort, null);
+        dialog.setContentView(sheetView);
+
+        ImageView ivCheckCurated = sheetView.findViewById(R.id.ivCheckCurated);
+        ImageView ivCheckRating = sheetView.findViewById(R.id.ivCheckRating);
+        ImageView ivCheckPriceLow = sheetView.findViewById(R.id.ivCheckPriceLow);
+        ImageView ivCheckPriceHigh = sheetView.findViewById(R.id.ivCheckPriceHigh);
+
+        ivCheckCurated.setVisibility(sortMode == 0 ? View.VISIBLE : View.GONE);
+        ivCheckRating.setVisibility(sortMode == 1 ? View.VISIBLE : View.GONE);
+        ivCheckPriceLow.setVisibility(sortMode == 2 ? View.VISIBLE : View.GONE);
+        ivCheckPriceHigh.setVisibility(sortMode == 3 ? View.VISIBLE : View.GONE);
+
+        sheetView.findViewById(R.id.sortOptionCurated).setOnClickListener(v -> {
+            sortMode = 0;
+            tvSortToggle.setText("Curated ▾");
+            dialog.dismiss();
+            applyFilters();
+        });
+
+        sheetView.findViewById(R.id.sortOptionRating).setOnClickListener(v -> {
+            sortMode = 1;
+            tvSortToggle.setText("Rating ★ ▾");
+            dialog.dismiss();
+            applyFilters();
+        });
+
+        sheetView.findViewById(R.id.sortOptionPriceLow).setOnClickListener(v -> {
+            sortMode = 2;
+            tvSortToggle.setText("Price: Low ▾");
+            dialog.dismiss();
+            applyFilters();
+        });
+
+        sheetView.findViewById(R.id.sortOptionPriceHigh).setOnClickListener(v -> {
+            sortMode = 3;
+            tvSortToggle.setText("Price: High ▾");
+            dialog.dismiss();
+            applyFilters();
+        });
+
+        dialog.show();
     }
 
     private void setupRecyclerView() {
@@ -228,14 +317,14 @@ public class ExploreFragment extends Fragment {
 
         for (Place p : allPlaces) {
             // Category check
-            if (!"ALL".equals(selectedCategory)) {
-                if (selectedCategory.equalsIgnoreCase("Food") && !p.isAffordableFood() && !"Food".equalsIgnoreCase(p.getCategory())) {
+            if (!"ALL".equalsIgnoreCase(selectedCategory)) {
+                if ("Food".equalsIgnoreCase(selectedCategory) && !p.isAffordableFood() && !"Food".equalsIgnoreCase(p.getCategory())) {
                     continue;
-                } else if (selectedCategory.equalsIgnoreCase("Study") && !p.isStudyWork() && !"Study".equalsIgnoreCase(p.getCategory())) {
+                } else if ("Study".equalsIgnoreCase(selectedCategory) && !p.isStudyWork() && !"Study".equalsIgnoreCase(p.getCategory())) {
                     continue;
-                } else if (selectedCategory.equalsIgnoreCase("Nature") && !"Nature".equalsIgnoreCase(p.getCategory()) && !"Sunset".equalsIgnoreCase(p.getCategory())) {
+                } else if ("Nature".equalsIgnoreCase(selectedCategory) && !"Nature".equalsIgnoreCase(p.getCategory()) && !"Sunset".equalsIgnoreCase(p.getCategory())) {
                     continue;
-                } else if (!selectedCategory.equalsIgnoreCase("Food") && !selectedCategory.equalsIgnoreCase("Study") && !selectedCategory.equalsIgnoreCase("Nature")) {
+                } else if (!"Food".equalsIgnoreCase(selectedCategory) && !"Study".equalsIgnoreCase(selectedCategory) && !"Nature".equalsIgnoreCase(selectedCategory)) {
                     if (!selectedCategory.equalsIgnoreCase(p.getCategory())) {
                         continue;
                     }
@@ -243,27 +332,43 @@ public class ExploreFragment extends Fragment {
             }
 
             // Area check
-            if (!"ALL".equals(selectedArea)) {
+            if (!"ALL".equalsIgnoreCase(selectedArea)) {
                 String area = p.getArea() != null ? p.getArea().toLowerCase() : "";
                 if (!area.contains(selectedArea.toLowerCase())) {
                     continue;
                 }
             }
 
-            // Quick tag check
-            if (!quickTag.isEmpty()) {
-                if ("wifi".equals(quickTag)) {
+            // Budget check
+            if (!"ALL".equalsIgnoreCase(selectedBudget)) {
+                int cost = p.getEstimatedCost();
+                if ("FREE".equalsIgnoreCase(selectedBudget) && cost > 0) continue;
+                if ("100".equalsIgnoreCase(selectedBudget) && cost > 100) continue;
+                if ("200".equalsIgnoreCase(selectedBudget) && cost > 200) continue;
+            }
+
+            // Facilities & Amenities
+            if (filterWifi) {
+                List<String> f = p.getFacilities();
+                if (f == null || (!f.contains("WiFi") && !f.contains("wifi"))) continue;
+            }
+            if (filterCharging) {
+                List<String> f = p.getFacilities();
+                if (f == null || (!f.contains("Charging") && !f.contains("charging"))) continue;
+            }
+            if (filterQuiet) {
+                if (!"Silent".equalsIgnoreCase(p.getQuietnessLevel()) && !"Quiet".equalsIgnoreCase(p.getQuietnessLevel())) {
                     List<String> f = p.getFacilities();
-                    if (f == null || (!f.contains("WiFi") && !f.contains("wifi"))) continue;
-                } else if ("free".equals(quickTag)) {
-                    if (p.getEstimatedCost() > 0) continue;
-                } else if ("sunset".equals(quickTag)) {
-                    if (!"Sunset".equalsIgnoreCase(p.getCategory()) && (p.getTags() == null || !p.getTags().contains("Sunset"))) continue;
-                } else if ("chai".equals(quickTag)) {
-                    if (!p.isAffordableFood()) continue;
-                } else if ("quiet".equals(quickTag)) {
-                    if (!"Silent".equalsIgnoreCase(p.getQuietnessLevel())) continue;
+                    if (f == null || !f.contains("Quiet")) continue;
                 }
+            }
+            if (filterSunset) {
+                boolean isSunset = "Sunset".equalsIgnoreCase(p.getCategory()) ||
+                        (p.getTags() != null && p.getTags().contains("Sunset"));
+                if (!isSunset) continue;
+            }
+            if (filterGemsOnly) {
+                if (!p.isHiddenGem()) continue;
             }
 
             // Search query check
@@ -292,9 +397,31 @@ public class ExploreFragment extends Fragment {
             Collections.sort(filteredPlaces, (p1, p2) -> Float.compare(p2.getRating(), p1.getRating()));
         } else if (sortMode == 2) {
             Collections.sort(filteredPlaces, (p1, p2) -> Integer.compare(p1.getEstimatedCost(), p2.getEstimatedCost()));
+        } else if (sortMode == 3) {
+            Collections.sort(filteredPlaces, (p1, p2) -> Integer.compare(p2.getEstimatedCost(), p1.getEstimatedCost()));
         }
 
-        tvResultsCount.setText("Showing " + filteredPlaces.size() + " Mumbai discoveries");
+        // Update active filter badge count
+        int activeFiltersCount = 0;
+        if (!"ALL".equalsIgnoreCase(selectedArea)) activeFiltersCount++;
+        if (!"ALL".equalsIgnoreCase(selectedBudget)) activeFiltersCount++;
+        if (filterWifi) activeFiltersCount++;
+        if (filterCharging) activeFiltersCount++;
+        if (filterQuiet) activeFiltersCount++;
+        if (filterSunset) activeFiltersCount++;
+        if (filterGemsOnly) activeFiltersCount++;
+
+        if (activeFiltersCount > 0) {
+            tvFilterBadge.setText(String.valueOf(activeFiltersCount));
+            tvFilterBadge.setVisibility(View.VISIBLE);
+            btnClearAllFilters.setVisibility(View.VISIBLE);
+        } else {
+            tvFilterBadge.setVisibility(View.GONE);
+            boolean hasNonDefault = !"ALL".equalsIgnoreCase(selectedCategory) || !query.isEmpty();
+            btnClearAllFilters.setVisibility(hasNonDefault ? View.VISIBLE : View.GONE);
+        }
+
+        tvResultsCount.setText(filteredPlaces.size() + " places");
 
         if (filteredPlaces.isEmpty()) {
             layoutEmptyExplore.setVisibility(View.VISIBLE);
@@ -319,13 +446,17 @@ public class ExploreFragment extends Fragment {
 
     private void resetFilters() {
         etSearch.setText("");
-        quickTag = "";
         selectedCategory = "ALL";
         selectedArea = "ALL";
+        selectedBudget = "ALL";
+        filterWifi = false;
+        filterCharging = false;
+        filterQuiet = false;
+        filterSunset = false;
+        filterGemsOnly = false;
         chipGroupCategory.check(R.id.chipCatAll);
-        chipGroupArea.check(R.id.chipAreaAll);
         sortMode = 0;
-        tvSortToggle.setText("Sort: Curated ▾");
+        tvSortToggle.setText("Curated ▾");
         applyFilters();
     }
 

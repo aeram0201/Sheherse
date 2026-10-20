@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sunny bohemian Pali Hill sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FDF6E2"
+                android:centerColor="#FEF3C7"
+                android:endColor="#DB2777"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Multi-tiered Portuguese villa rooftop terrace silhouette -->
+    <item android:left="30dp" android:right="30dp" android:top="30dp" android:bottom="90dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAF8F2" />
+            <corners android:topLeftRadius="12dp" android:topRightRadius="12dp" />
+        </shape>
+    </item>
+    <!-- Terracotta tiled sloping roof -->
+    <item android:left="20dp" android:right="20dp" android:top="20dp" android:bottom="185dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E05A47" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Multi-colored whimsical Portuguese ceramic mosaic tiles -->
+    <item android:left="50dp" android:right="260dp" android:top="70dp" android:bottom="120dp"><shape android:shape="rectangle"><solid android:color="#1D4ED8" /></shape></item>
+    <item android:left="110dp" android:right="200dp" android:top="70dp" android:bottom="120dp"><shape android:shape="rectangle"><solid android:color="#D4AF37" /></shape></item>
+    <item android:left="170dp" android:right="140dp" android:top="70dp" android:bottom="120dp"><shape android:shape="rectangle"><solid android:color="#059669" /></shape></item>
+    <item android:left="230dp" android:right="80dp" android:top="70dp" android:bottom="120dp"><shape android:shape="rectangle"><solid android:color="#DB2777" /></shape></item>
+    <!-- Villa garden terrace floor -->
+    <item android:top="130dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:endColor="#F4F0E6"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Wrought iron cafe table with colourful pastry display -->
+    <item android:left="120dp" android:right="120dp" android:top="140dp" android:bottom="40dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+        </shape>
+    </item>
+    <item android:left="145dp" android:right="145dp" android:top="135dp" android:bottom="75dp">
+        <shape android:shape="oval">
+            <solid android:color="#DB2777" />
+        </shape>
+    </item>
+</layer-list>

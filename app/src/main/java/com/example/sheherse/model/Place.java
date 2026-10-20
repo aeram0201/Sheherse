@@ -28,10 +28,12 @@ public class Place implements Serializable {
     private String openingHours;
     private String insiderTip;
     private String ownerId;
+    private List<MenuItem> menuItems = new ArrayList<>();
 
     public Place() {
         this.tags = new ArrayList<>();
         this.facilities = new ArrayList<>();
+        this.menuItems = new ArrayList<>();
     }
 
     public Place(String id, String name, String description, String category, String area,
@@ -133,4 +135,7 @@ public class Place implements Serializable {
 
     public String getOwnerId() { return ownerId; }
     public void setOwnerId(String ownerId) { this.ownerId = ownerId; }
+
+    public List<MenuItem> getMenuItems() { return menuItems != null ? menuItems : new ArrayList<>(); }
+    public void setMenuItems(List<MenuItem> menuItems) { this.menuItems = menuItems; }
 }

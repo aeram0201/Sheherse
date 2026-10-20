@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Dawn morning mist and purple/gold sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#EDE9FE"
+                android:centerColor="#FCE7F3"
+                android:endColor="#7C3AED"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- Dadar station flyover concrete arches overhead -->
+    <item android:left="10dp" android:right="10dp" android:top="15dp" android:bottom="175dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#4E5D54" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Massive wicker cane baskets of fresh marigolds (Genda Phool) -->
+    <item android:left="40dp" android:right="200dp" android:top="85dp" android:bottom="45dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+            <corners android:bottomLeftRadius="25dp" android:bottomRightRadius="25dp" />
+        </shape>
+    </item>
+    <!-- Mountain of golden yellow & orange marigold flowers overflowing -->
+    <item android:left="30dp" android:right="190dp" android:top="65dp" android:bottom="85dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#F5EE9E"
+                android:centerColor="#D4AF37"
+                android:endColor="#D97706"
+                android:angle="45" />
+        </shape>
+    </item>
+    <!-- Second basket with bright saffron/orange marigolds -->
+    <item android:left="180dp" android:right="60dp" android:top="95dp" android:bottom="35dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+            <corners android:bottomLeftRadius="25dp" android:bottomRightRadius="25dp" />
+        </shape>
+    </item>
+    <item android:left="170dp" android:right="50dp" android:top="75dp" android:bottom="75dp">
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#F97316"
+                android:centerColor="#EA580C"
+                android:endColor="#C2410C"
+                android:angle="45" />
+        </shape>
+    </item>
+    <!-- Hanging Mogra (Jasmine) white fragrant flower garlands -->
+    <item android:left="135dp" android:right="195dp" android:top="40dp" android:bottom="70dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item android:left="150dp" android:right="180dp" android:top="45dp" android:bottom="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAF8F2" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <item android:left="165dp" android:right="165dp" android:top="35dp" android:bottom="80dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+</layer-list>

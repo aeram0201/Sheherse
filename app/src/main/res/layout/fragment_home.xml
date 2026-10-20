@@ -13,16 +13,16 @@
         android:orientation="vertical"
         android:paddingBottom="40dp">
 
-        <!-- Hero Header -->
+        <!-- ── HERO HEADER ── -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/forest_green_primary"
             android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingTop="28dp"
-            android:paddingEnd="20dp"
-            android:paddingBottom="24dp">
+            android:paddingStart="16dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -38,18 +38,18 @@
                         android:id="@+id/tvAppName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sheherse • शहर से"
+                        android:text="SheherSe • शहर से"
                         android:textColor="@color/warm_ivory_background"
-                        android:textSize="26sp"
+                        android:textSize="22sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="The Insider Mumbai Discovery App"
+                        android:layout_marginTop="1dp"
+                        android:text="Discover the city, from the city."
                         android:textColor="@color/teal_pale"
-                        android:textSize="13sp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <!-- User Role Badge -->
@@ -61,23 +61,34 @@
                     android:layout_centerVertical="true"
                     android:background="@drawable/bg_badge_rounded"
                     android:backgroundTint="@color/forest_green_pale"
-                    android:paddingStart="12dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="6dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
                     android:textColor="@color/forest_green_primary"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold"
                     tools:text="🧭 Explorer" />
             </RelativeLayout>
 
-            <!-- Live Mumbai Ticker Card -->
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/warm_ivory_background"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="Namaste, Arjun! Where does your curiosity lead today?" />
+
+            <!-- Live Ticker -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 app:cardBackgroundColor="@color/forest_green_dark"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="10dp"
                 app:strokeColor="@color/teal_secondary"
                 app:strokeWidth="1dp">
 
@@ -86,10 +97,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingStart="12dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="10dp">
+                    android:paddingStart="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -97,48 +108,37 @@
                         android:background="@drawable/bg_badge_rounded"
                         android:backgroundTint="@color/vibrant_coral"
                         android:paddingStart="6dp"
-                        android:paddingTop="2dp"
+                        android:paddingTop="1dp"
                         android:paddingEnd="6dp"
-                        android:paddingBottom="2dp"
+                        android:paddingBottom="1dp"
                         android:text="LIVE"
                         android:textColor="@color/white"
-                        android:textSize="10sp"
+                        android:textSize="9sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvLiveMumbaiTicker"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="8dp"
                         android:layout_weight="1"
                         android:ellipsize="marquee"
                         android:singleLine="true"
-                        android:text="🌊 Marine Drive Sunset: 6:18 PM • ☕ Irani Chai Hour active • 🚆 Local Trains on schedule"
+                        android:text="🌊 Marine Drive Sunset: 6:18 PM • ☕ Irani Chai Hour active • 🚆 Local Trains on schedule • 🌸 Dadar Flowers fresh daily"
                         android:textColor="@color/warm_ivory_surface"
-                        android:textSize="12sp" />
+                        android:textSize="11sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
-            <!-- Personalized Greeting & Quick Search Trigger -->
-            <TextView
-                android:id="@+id/tvGreeting"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:textColor="@color/warm_ivory_background"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:text="Namaste, Arjun! Where does your curiosity lead today?" />
         </LinearLayout>
 
-        <!-- Role Quick Workspace Banner (Guides / Place Owners) -->
+        <!-- ── ROLE ACTION BANNER (Guides / Place Owners) ── -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardRoleAction"
             style="@style/SheherseCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone">
 
@@ -147,19 +147,19 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="14dp">
+                android:padding="12dp">
 
                 <ImageView
                     android:id="@+id/ivRoleIcon"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:src="@drawable/ic_edit"
                     app:tint="@color/forest_green_primary" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -168,7 +168,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_primary"
-                        android:textSize="14sp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         tools:text="Tour Guide Workspace" />
 
@@ -177,294 +177,402 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/text_secondary"
-                        android:textSize="12sp"
-                        tools:text="Manage your heritage walks and review traveler enquiries" />
+                        android:textSize="11sp"
+                        tools:text="Manage heritage walks and review traveler enquiries" />
                 </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnOpenRoleDashboard"
                     style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="34dp"
                     android:backgroundTint="@color/forest_green_pale"
                     android:text="Manage"
                     android:textColor="@color/forest_green_primary"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Section 1: Choose Your Mood & Vibe (Lots of happening options!) -->
-        <RelativeLayout
+        <!-- ── AI SMART TRIP PLANNER BANNER (Compact & Elegant) ── -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardAiPlanner"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/forest_green_dark"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/teal_secondary"
+            app:strokeWidth="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:src="@drawable/banner_ai_planner"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.25" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_badge_rounded"
+                            android:backgroundTint="@color/gold_primary"
+                            android:paddingStart="6dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="2dp"
+                            android:text="✨ AI Powered"
+                            android:textColor="@color/forest_green_dark"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Smart Trip Planner"
+                            android:textColor="@color/warm_ivory_background"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Personalised, budget-aware Mumbai itinerary in seconds ➔"
+                        android:textColor="@color/teal_pale"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ── SECTION: EXPLORE MUMBAI YOUR WAY (6 module cards) ── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:text="Explore Mumbai Your Way"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="1dp"
+            android:text="Six ways to discover the city's best secrets"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <!-- 2 x 3 module grid -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:text="Choose Your Mumbai Mood"
-                android:textColor="@color/text_primary"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvExploreAllMoods"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:text="Explore All →"
-                android:textColor="@color/forest_green_primary"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:clipToPadding="false"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:scrollbars="none">
-
+            <!-- Row 1 -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <!-- 1. Hidden Gems -->
+                <!-- 1. Explore Mumbai -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardExploreModule"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_explore">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_compass" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Explore\nMumbai"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2. First Time in Mumbai -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFirstTime"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_first_time">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_map_pinned" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="First Time\nHere?"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 3. Hidden Gems -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardHiddenGems"
-                    style="@style/SheherseCard"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
 
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/bg_badge_rounded"
-                        android:backgroundTint="@color/forest_green_pale"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
+                        android:background="@drawable/bg_card_hidden_gems">
 
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_gem"
-                            app:tint="@color/forest_green_primary" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="Secret Gems"
-                            android:textColor="@color/forest_green_dark"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_gem" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Beyond Gateways"
-                            android:textColor="@color/forest_green_medium"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- 2. Study & Work Spots -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardStudyWork"
-                    style="@style/SheherseCard"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_badge_rounded"
-                        android:backgroundTint="@color/teal_pale"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_study"
-                            app:tint="@color/teal_secondary" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="Study &amp; WiFi"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Quiet Sockets + AC"
-                            android:textColor="@color/teal_secondary"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- 3. Vintage Irani & Chai Feasts -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardAffordableFood"
-                    style="@style/SheherseCard"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_badge_rounded"
-                        android:backgroundTint="@color/vibrant_amber_pale"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_food"
-                            app:tint="@color/vibrant_amber" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="Budget Food &amp; Chai"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Under ₹150 feasts"
-                            android:textColor="@color/vibrant_amber"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- 4. Happening Events & Walks -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardEvents"
-                    style="@style/SheherseCard"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_badge_rounded"
-                        android:backgroundTint="@color/vibrant_purple_pale"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_event"
-                            app:tint="@color/vibrant_purple" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="Heritage Walks"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Led by specialists"
-                            android:textColor="@color/vibrant_purple"
-                            android:textSize="10sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- 5. Community Gems -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardCommunity"
-                    style="@style/SheherseCard"
-                    android:layout_width="145dp"
-                    android:layout_height="130dp"
-                    android:layout_marginEnd="10dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/bg_badge_rounded"
-                        android:backgroundTint="@color/vibrant_coral_pale"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="12dp">
-
-                        <ImageView
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:src="@drawable/ic_community"
-                            app:tint="@color/vibrant_coral" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:gravity="center"
-                            android:text="Crowdsourced"
-                            android:textColor="@color/text_primary"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="Explorer tips &amp; spots"
-                            android:textColor="@color/vibrant_coral"
-                            android:textSize="10sp" />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Hidden\nGems"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
-        </HorizontalScrollView>
 
-        <!-- Section 2: Ready-to-Go Curated Trails (Happening Day Itineraries!) -->
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <!-- 4. Study & Work -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardStudyWork"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_study_work">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_book_open" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Study &amp;\nWork"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 5. Affordable Eats -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardAffordableFood"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_affordable_eats">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_utensils" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Affordable\nEats"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 6. Events & Local Experiences -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardEvents"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp"
+                    app:strokeColor="@android:color/transparent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_card_events">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:padding="11dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_lucide_calendar_days" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:text="Events &amp;\nWalks"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ── SECTION: CURATED DAY TRAILS ── -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -507,7 +615,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <!-- Trail 1 -->
+                <!-- Trail 1: Student SoBo -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardTrailStudent"
                     style="@style/SheherseCard"
@@ -565,7 +673,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Trail 2 -->
+                <!-- Trail 2: Fort Art Deco -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardTrailDeco"
                     style="@style/SheherseCard"
@@ -608,7 +716,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Flora Fountain → Horniman Circle → Oval Maidan &amp; Art Deco"
+                            android:text="Horniman Circle → Central Library → Britannia"
                             android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
@@ -623,7 +731,7 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Trail 3 -->
+                <!-- Trail 3: Bandra Village -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardTrailBandra"
                     style="@style/SheherseCard"
@@ -666,7 +774,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Ranwar Murals → Subko → Bandstand Seaside Breeze"
+                            android:text="Ranwar Murals → Subko → Bandstand Breeze"
                             android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
@@ -683,7 +791,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Section 3: Bambaiya Slang & Insider Hack Card (Super fun & authentic!) -->
+        <!-- ── BAMBAIYA SLANG CARD ── -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardBambaiyaHack"
             style="@style/SheherseCard"
@@ -698,8 +806,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_badge_rounded"
-                android:backgroundTint="@color/warm_ivory"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -727,7 +833,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:text="Tap for Slang Book →"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="@color/text_hint"
                         android:textSize="11sp" />
                 </RelativeLayout>
 
@@ -748,11 +854,12 @@
                     android:layout_marginTop="3dp"
                     android:text="At vintage Irani joints, order 'Kadak Single' for strong milk tea in a glass cup, paired with crusty Brun Maska dipped in chai!"
                     android:textColor="@color/text_secondary"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="2dp" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Section 4: Featured Secret Spots (Filtered by quick pills) -->
+        <!-- ── SECTION: CURATED INSIDER SPOTS ── -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -776,13 +883,13 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:padding="4dp"
-                android:text="View All (16) →"
+                android:text="View All →"
                 android:textColor="@color/teal_secondary"
                 android:textSize="13sp"
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <!-- Quick filter chips for featured places -->
+        <!-- Filter chips -->
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -804,7 +911,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="All Recommendations" />
+                    android:text="All Spots" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipHomeBudget"
@@ -829,7 +936,7 @@
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
 
-        <!-- RecyclerView for Featured Places -->
+        <!-- Featured places RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvFeaturedPlaces"
             android:layout_width="match_parent"
@@ -837,6 +944,70 @@
             android:layout_marginTop="10dp"
             android:nestedScrollingEnabled="false"
             tools:listitem="@layout/item_place" />
+
+        <!-- Community card (kept for navigation) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCommunity"
+            style="@style/SheherseCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="14dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_community"
+                    app:tint="@color/vibrant_coral" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit a Hidden Gem"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Know a secret spot? Add it to the Mumbai map."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_down"
+                    android:rotation="-90"
+                    app:tint="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Hidden view kept for backward compat with HomeFragment.java -->
+        <TextView
+            android:id="@+id/tvExploreAllMoods"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

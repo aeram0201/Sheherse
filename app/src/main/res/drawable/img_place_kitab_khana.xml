@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Rich teakwood and emerald library interior background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#1B4332"
+                android:centerColor="#2D6A4F"
+                android:endColor="#081C15"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- 150-year-old Somaiya Bhavan colonial high ceiling beams -->
+    <item android:left="20dp" android:right="20dp" android:top="10dp" android:bottom="200dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+        </shape>
+    </item>
+    <!-- Towering teakwood bookshelves with multi-color book spines -->
+    <item android:left="25dp" android:right="160dp" android:top="30dp" android:bottom="50dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#451A03" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+    <!-- Shelf 1 books -->
+    <item android:left="35dp" android:right="170dp" android:top="40dp" android:bottom="160dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#D4AF37"
+                android:centerColor="#E05A47"
+                android:endColor="#1D4ED8"
+                android:angle="0" />
+        </shape>
+    </item>
+    <!-- Shelf 2 books -->
+    <item android:left="35dp" android:right="170dp" android:top="90dp" android:bottom="110dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#52B788"
+                android:centerColor="#FAF8F2"
+                android:endColor="#7C3AED"
+                android:angle="0" />
+        </shape>
+    </item>
+    <!-- Shelf 3 books -->
+    <item android:left="35dp" android:right="170dp" android:top="140dp" android:bottom="60dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#D97706"
+                android:centerColor="#1B4332"
+                android:endColor="#D4AF37"
+                android:angle="0" />
+        </shape>
+    </item>
+    <!-- Somethings Gourmet Cafe reading table on the right -->
+    <item android:left="210dp" android:right="20dp" android:top="110dp" android:bottom="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAF8F2" />
+            <corners android:topLeftRadius="8dp" android:topRightRadius="8dp" />
+        </shape>
+    </item>
+    <!-- Warm brass reading desk lamp -->
+    <item android:left="270dp" android:right="55dp" android:top="60dp" android:bottom="115dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <item android:left="255dp" android:right="40dp" android:top="50dp" android:bottom="160dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Lamp warm golden light cone -->
+    <item android:left="240dp" android:right="30dp" android:top="70dp" android:bottom="80dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FDF6E2" />
+        </shape>
+    </item>
+    <!-- Coffee cup and open paperback book on cafe table -->
+    <item android:left="230dp" android:right="95dp" android:top="120dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FDF6E2" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+</layer-list>

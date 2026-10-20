@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tropical rainforest mountain mist sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#D8F3DC"
+                android:centerColor="#40916C"
+                android:endColor="#1B4332"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- SGNP forest mountain ridge slope -->
+    <item android:left="10dp" android:right="10dp" android:top="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2D6A4F" />
+            <corners android:topLeftRadius="40dp" android:topRightRadius="40dp" />
+        </shape>
+    </item>
+    <!-- Giant rock-cut basalt cliff face -->
+    <item android:left="30dp" android:right="30dp" android:top="65dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0F172A" />
+            <corners android:topLeftRadius="20dp" android:topRightRadius="20dp" />
+        </shape>
+    </item>
+    <!-- Cave 3 monumental Chaitya Hall horseshoe arch entrance portal -->
+    <item android:left="110dp" android:right="110dp" android:top="80dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#020617" />
+            <corners android:topLeftRadius="70dp" android:topRightRadius="70dp" />
+        </shape>
+    </item>
+    <!-- Ancient rock-cut Stupa dome silhouette inside the hall -->
+    <item android:left="145dp" android:right="145dp" android:top="115dp" android:bottom="45dp">
+        <shape android:shape="oval">
+            <solid android:color="#D4AF37" />
+        </shape>
+    </item>
+    <!-- Octagonal monolithic stone pillars flanking entrance -->
+    <item android:left="75dp" android:right="260dp" android:top="95dp" android:bottom="25dp">
+        <shape android:shape="rectangle"><solid android:color="#1E293B" /></shape>
+    </item>
+    <item android:left="260dp" android:right="75dp" android:top="95dp" android:bottom="25dp">
+        <shape android:shape="rectangle"><solid android:color="#1E293B" /></shape>
+    </item>
+    <!-- Monsoon moss and green ferns on rock ledge -->
+    <item android:left="40dp" android:right="40dp" android:top="190dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#52B788" />
+        </shape>
+    </item>
+</layer-list>

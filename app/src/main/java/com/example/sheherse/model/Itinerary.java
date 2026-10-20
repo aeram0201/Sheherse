@@ -12,9 +12,30 @@ public class Itinerary implements Serializable {
     private List<ItineraryStop> stops;
     private long createdAt;
 
+    // Detailed planning fields
+    private String planningDate;
+    private String startTime;
+    private String finishTime;
+    private int totalTravelMinutes;
+    private int totalVisitMinutes;
+    private boolean costIsFullyKnown;
+    private String planningRationale;
+    private List<String> warnings;
+    private boolean isFeasible;
+    private List<String> infeasibilityReasons;
+    private List<String> alternativeSuggestions;
+    private List<TravelLeg> travelLegs;
+    private CostBreakdown costBreakdown;
+
     public Itinerary() {
         this.interests = new ArrayList<>();
         this.stops = new ArrayList<>();
+        this.travelLegs = new ArrayList<>();
+        this.warnings = new ArrayList<>();
+        this.infeasibilityReasons = new ArrayList<>();
+        this.alternativeSuggestions = new ArrayList<>();
+        this.costIsFullyKnown = true;
+        this.isFeasible = true;
         this.createdAt = System.currentTimeMillis();
     }
 
@@ -24,14 +45,28 @@ public class Itinerary implements Serializable {
         this.targetBudget = targetBudget;
         this.interests = interests != null ? interests : new ArrayList<>();
         this.stops = new ArrayList<>();
+        this.travelLegs = new ArrayList<>();
+        this.warnings = new ArrayList<>();
+        this.infeasibilityReasons = new ArrayList<>();
+        this.alternativeSuggestions = new ArrayList<>();
+        this.costIsFullyKnown = true;
+        this.isFeasible = true;
         this.createdAt = System.currentTimeMillis();
     }
 
     public int calculateTotalCost() {
+        if (costBreakdown != null && costBreakdown.getTotalCostInr() > 0) {
+            return costBreakdown.getTotalCostInr();
+        }
         int total = 0;
         if (stops != null) {
             for (ItineraryStop stop : stops) {
                 total += stop.getCustomCost();
+            }
+        }
+        if (travelLegs != null) {
+            for (TravelLeg leg : travelLegs) {
+                total += leg.getFareInr();
             }
         }
         return total;
@@ -42,6 +77,7 @@ public class Itinerary implements Serializable {
         if (stops != null) {
             for (ItineraryStop stop : stops) {
                 total += stop.getCustomDurationMinutes();
+                total += stop.getTravelTimeToNextMinutes();
             }
         }
         return total;
@@ -64,4 +100,43 @@ public class Itinerary implements Serializable {
 
     public long getCreatedAt() { return createdAt; }
     public void setCreatedAt(long createdAt) { this.createdAt = createdAt; }
+
+    public String getPlanningDate() { return planningDate; }
+    public void setPlanningDate(String planningDate) { this.planningDate = planningDate; }
+
+    public String getStartTime() { return startTime; }
+    public void setStartTime(String startTime) { this.startTime = startTime; }
+
+    public String getFinishTime() { return finishTime; }
+    public void setFinishTime(String finishTime) { this.finishTime = finishTime; }
+
+    public int getTotalTravelMinutes() { return totalTravelMinutes; }
+    public void setTotalTravelMinutes(int totalTravelMinutes) { this.totalTravelMinutes = totalTravelMinutes; }
+
+    public int getTotalVisitMinutes() { return totalVisitMinutes; }
+    public void setTotalVisitMinutes(int totalVisitMinutes) { this.totalVisitMinutes = totalVisitMinutes; }
+
+    public boolean isCostIsFullyKnown() { return costIsFullyKnown; }
+    public void setCostIsFullyKnown(boolean costIsFullyKnown) { this.costIsFullyKnown = costIsFullyKnown; }
+
+    public String getPlanningRationale() { return planningRationale; }
+    public void setPlanningRationale(String planningRationale) { this.planningRationale = planningRationale; }
+
+    public List<String> getWarnings() { return warnings; }
+    public void setWarnings(List<String> warnings) { this.warnings = warnings; }
+
+    public boolean isFeasible() { return isFeasible; }
+    public void setFeasible(boolean feasible) { isFeasible = feasible; }
+
+    public List<String> getInfeasibilityReasons() { return infeasibilityReasons; }
+    public void setInfeasibilityReasons(List<String> infeasibilityReasons) { this.infeasibilityReasons = infeasibilityReasons; }
+
+    public List<String> getAlternativeSuggestions() { return alternativeSuggestions; }
+    public void setAlternativeSuggestions(List<String> alternativeSuggestions) { this.alternativeSuggestions = alternativeSuggestions; }
+
+    public List<TravelLeg> getTravelLegs() { return travelLegs != null ? travelLegs : new ArrayList<>(); }
+    public void setTravelLegs(List<TravelLeg> travelLegs) { this.travelLegs = travelLegs; }
+
+    public CostBreakdown getCostBreakdown() { return costBreakdown; }
+    public void setCostBreakdown(CostBreakdown costBreakdown) { this.costBreakdown = costBreakdown; }
 }

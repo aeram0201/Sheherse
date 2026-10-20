@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm welcome gradient background -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:centerColor="#FEF3C7"
+                android:endColor="#D97706"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- City skyline base -->
+    <item android:top="90dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+        </shape>
+    </item>
+    <!-- Skyline jagged tops - tall building left -->
+    <item
+        android:left="20dp"
+        android:right="290dp"
+        android:top="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+        </shape>
+    </item>
+    <!-- Medium building -->
+    <item
+        android:left="55dp"
+        android:right="260dp"
+        android:top="70dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <!-- Tower center -->
+    <item
+        android:left="140dp"
+        android:right="180dp"
+        android:top="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:topLeftRadius="2dp" android:topRightRadius="2dp" />
+        </shape>
+    </item>
+    <!-- Building cluster right -->
+    <item
+        android:left="200dp"
+        android:right="100dp"
+        android:top="65dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <item
+        android:left="240dp"
+        android:right="60dp"
+        android:top="55dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+        </shape>
+    </item>
+    <item
+        android:left="280dp"
+        android:right="40dp"
+        android:top="75dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2D6A4F" />
+        </shape>
+    </item>
+    <!-- BEST Bus silhouette (rectangle with rounded top) -->
+    <item
+        android:left="80dp"
+        android:right="180dp"
+        android:top="130dp"
+        android:bottom="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E05A47" />
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <!-- Bus window strip -->
+    <item
+        android:left="85dp"
+        android:right="185dp"
+        android:top="135dp"
+        android:bottom="60dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FAF8F2" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <!-- Bus wheels -->
+    <item
+        android:left="90dp"
+        android:right="240dp"
+        android:top="170dp"
+        android:bottom="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <item
+        android:left="140dp"
+        android:right="190dp"
+        android:top="170dp"
+        android:bottom="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#081C15" />
+        </shape>
+    </item>
+    <!-- Road -->
+    <item android:top="185dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2D6A4F" />
+        </shape>
+    </item>
+</layer-list>

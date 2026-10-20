@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm tranquil Girgaon afternoon sky -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#FAF8F2"
+                android:centerColor="#FEF3C7"
+                android:endColor="#F4F0E6"
+                android:angle="270" />
+        </shape>
+    </item>
+    <!-- 19th-century Portuguese wooden cottage pitched tiled roof -->
+    <item android:left="40dp" android:right="40dp" android:top="25dp" android:bottom="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#DC2626" />
+            <corners android:topLeftRadius="20dp" android:topRightRadius="20dp" />
+        </shape>
+    </item>
+    <!-- Pastel yellow / ochre painted cottage facade -->
+    <item android:left="60dp" android:right="60dp" android:top="80dp" android:bottom="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FDE047" />
+        </shape>
+    </item>
+    <!-- Wooden verandah (Balcao) with green shuttered windows -->
+    <item android:left="80dp" android:right="220dp" android:top="95dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <item android:left="220dp" android:right="80dp" android:top="95dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1B4332" />
+            <corners android:radius="3dp" />
+        </shape>
+    </item>
+    <!-- Iconic external wooden staircase ascending to upper floor -->
+    <item android:left="145dp" android:right="145dp" android:top="90dp" android:bottom="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78350F" />
+        </shape>
+    </item>
+    <!-- Cobblestone narrow lane with quiet leafy potted plants -->
+    <item android:top="180dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#78716C" />
+        </shape>
+    </item>
+    <!-- Clay flower pots lining the wooden balustrade -->
+    <item android:left="75dp" android:right="255dp" android:top="160dp" android:bottom="40dp"><shape android:shape="oval"><solid android:color="#40916C" /></shape></item>
+    <item android:left="255dp" android:right="75dp" android:top="160dp" android:bottom="40dp"><shape android:shape="oval"><solid android:color="#40916C" /></shape></item>
+</layer-list>
